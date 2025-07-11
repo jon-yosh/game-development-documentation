@@ -2,10 +2,6 @@
 
 Welcome to our game development documentation repository! This repository serves as a centralized hub for all our game development documentation, built with React to display markdown files in an organized and accessible format.
 
-## 📁 Repository Structure
-
-This repository is designed specifically for documentation purposes, with React handling the display and navigation of markdown content. Each article maintains its own version history through our branching and file management system.
-
 ## 🌿 Branch Naming Convention
 
 When creating or updating documentation, follow this strict branch naming convention:
@@ -17,17 +13,14 @@ article-name-v[version-number]
 ### Examples:
 - `character-progression-system-v1.0`
 - `blender-modeling-workflow-v2.1`
-- `unity-scene-management-v1.3`
+- `godot-animation-player-v1.3`
 - `react-component-architecture-v3.0`
-- `angular-routing-setup-v1.5`
 - `git-branching-strategy-v2.0`
 
 ### Rules:
 - Use lowercase letters only
 - Replace spaces with hyphens (`-`)
 - Always include the version number (e.g., `v1.0`, `v2.1`, `v10.5`)
-- Keep article names descriptive but concise
-- Use semantic versioning (major.minor format)
 
 ## 📝 Article Management Workflow
 
@@ -42,12 +35,9 @@ article-name-v[version-number]
 
 2. **Create your markdown file** in the appropriate directory:
    ```
-   [specific game's documentation]/
-   ├── game-design/
+   ├── godot/
    ├── blender/
-   ├── unity/
    ├── react/
-   ├── angular/
    └── git/
    ```
 
@@ -116,19 +106,18 @@ When updating an article, you **must** create a copy of the previous version to 
 ## 📁 File Organization
 
 ```
-repository-root/
+game-development-documentation/
 ├── src/
 │   └── (React application files)
 ├── docs/
-│   ├── [specific game's documentation]/
-│   │   ├── game-design/
-│   │   │   ├── character-movement-v1.0.md
-│   │   │   ├── character-movement-v1.1.md
-│   │   │   └── inventory-system-v2.0.md
-│   │   ├── blender/
-│   │   │   ├── blender-overview-v1.0.md
-│   │   │   └── ...
-│   └── [another game's documentation]/
+│   ├── godot/
+│   │   ├── character-movement-v1.0.md
+│   │   ├── character-movement-v1.1.md
+│   │   └── inventory-system-v2.0.md
+│   ├── blender/
+│   │   ├── blender-overview-v1.0.md
+│   │   └── ...
+│   └── [another tool]/
 │       └── ...
 ├── README.md
 └── package.json
@@ -137,29 +126,19 @@ repository-root/
 ## ✅ Best Practices
 
 ### Writing Guidelines
-- Use clear, descriptive headings
-- Include code examples when relevant
 - Add diagrams or images in an `assets/` folder within the category
-- Keep language clear and jargon-free when possible
-- Include a brief summary at the top of each article
-
-### Markdown Formatting
-- Use consistent heading levels (# ## ### ####)
-- Include a table of contents for longer articles
-- Use code blocks with appropriate language highlighting
-- Link to related articles when relevant
 
 ### Branch Management
 - Delete merged branches after successful integration
 - Keep branch names consistent with the file names
-- Always create branches from an up-to-date `main` branch
+- Always create branches from an up-to-date `develop` branch
 
 ## 🚀 Getting Started
 
 1. Clone the repository:
    ```bash
-   git clone [repository-url]
-   cd [repository-name]
+   git clone git@github.com:JonYoshioka/game-development-documentation.git
+   cd game-development-documentation/game-development-documentation
    ```
 
 2. Install dependencies:
@@ -169,20 +148,9 @@ repository-root/
 
 3. Start the development server:
    ```bash
-   npm start
+   npm run dev
    ```
 
 4. Begin writing your documentation following the guidelines above!
-
-## 🤝 Contributing
-
-All team members are encouraged to contribute to this documentation. When in doubt about structure, naming, or content, feel free to:
-- Open an issue for discussion
-- Ask in the team chat
-- Create a draft pull request for feedback
-
-## 📞 Support
-
-For questions about this documentation system or Git workflow, contact the development team lead or create an issue in this repository.
 
 ---
