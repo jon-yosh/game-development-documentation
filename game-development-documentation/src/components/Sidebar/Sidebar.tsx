@@ -39,6 +39,11 @@ const Sidebar = () => {
                 <div className="sidebar">
                     <div className="sections">
 
+                        {/* Home */}
+                        <h3>
+                            <Link to={'/'}>{"Home"}</Link>
+                        </h3>
+
                         {/* Blender */}
                         <div className="section">
                             <button
