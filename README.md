@@ -2,6 +2,10 @@
 
 Welcome to our game development documentation repository! This repository serves as a centralized hub for all our game development documentation, built with React to display markdown files in an organized and accessible format.
 
+## Live Page
+
+To view the page live, visit: https://jonyoshioka.github.io/game-development-documentation/
+
 ## 🚀 Getting Started
 
 1. Clone the repository:
