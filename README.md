@@ -2,25 +2,34 @@
 
 Welcome to our game development documentation repository! This repository serves as a centralized hub for all our game development documentation, built with React to display markdown files in an organized and accessible format.
 
-## 🌿 Branch Naming Convention
+## 🚀 Getting Started
 
-When creating or updating documentation, follow this strict branch naming convention:
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:JonYoshioka/game-development-documentation.git
+   cd game-development-documentation/game-development-documentation
+   ```
 
-```
-article-name-v[version-number]
-```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### Examples:
-- `character-progression-system-v1`
-- `blender-modeling-workflow-v2`
-- `godot-animation-player-v1`
-- `react-component-architecture-v3`
-- `git-branching-strategy-v2`
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+### Branch Name Examples:
+- `character-progression-system`
+- `blender-modeling-workflow`
+- `godot-animation-player`
+- `react-component-architecture`
+- `git-branching-strategy`
 
 ### Rules:
 - Use lowercase letters only
 - Replace spaces with hyphens (`-`)
-- Always include the version number (e.g., `v1`, `v2`, `v10`)
 
 ## 📝 Article Management Workflow
 
@@ -30,13 +39,16 @@ article-name-v[version-number]
    ```bash
    git checkout main
    git pull origin main
-   git checkout -b your-article-name-v1
+   git checkout -b your-article-name
    ```
 
-2. **Create your markdown file** in the appropriate directory:
+2. **Create your markdown file** in the appropriate directory under a **your-article-name folder** with an `assets/` folder:
    ```
    ├── blender/
    ├── godot/
+   │   └── your-article-name/
+   │        ├── assets/
+   │        └── your-article-name.md
    ├── git/
    ├── react/
    ├── procreate/
@@ -46,32 +58,36 @@ article-name-v[version-number]
 
 3. **Name your file** using the same convention as the branch:
    ```
-   your-article-name-v1.md
+   your-article-name.md
+   ```
+
+4. **Update `Sidebar.tsx`** to include path to markdown file along with a title for the article to be shown on the sidebar:
+
+   ```
+   ...
+   godot: [
+      {
+         title: "Character Movement",
+         id: "godot/character-movement/character-movement"
+      },
+   ...
    ```
 
 ### Updating an Existing Article
 
-When updating an article, you **must** create a copy of the previous version to maintain history:
-
-1. **Create a new branch** with the incremented version:
+1. **Create a new branch** with the same article name:
    ```bash
    git checkout main
    git pull origin main
-   git checkout -b your-article-name-v2
+   git checkout -b your-article-name
    ```
 
-2. **Copy the existing file** to preserve the previous version:
-   ```bash
-   # Create the new version
-   cp docs/category/your-article-name-v1.md docs/category/your-article-name-v2.md
-   ```
-
-3. **Edit the new version file** (`your-article-name-v2.md`) with your updates
+3. **Edit the new version file** (`your-article-name.md`) with your updates
 
 4. **Commit both files**:
    ```bash
-   git add docs/category/your-article-name-v2.md
-   git commit -m "Update article-name to v2, preserve v1 history"
+   git add .
+   git commit -m "Update article-name to include feature"
    ```
 
 ## 📋 Version History Management
@@ -105,11 +121,14 @@ game-development-documentation/
 │   └── (React application files)
 ├── docs/
 │   ├── godot/
-│   │   ├── character-movement-v1.md
-│   │   ├── character-movement-v2.md
-│   │   └── inventory-system-v2.md
+│   │   ├── character-movement/
+│   │   │    ├── assets/
+│   │   │    │    └── img1.jpg
+│   │   │    └── character-movement.md
+│   │   └──── inventory-system/
+│   │        └── inventory-system.md
 │   ├── blender/
-│   │   ├── blender-overview-v1.md
+│   │   ├── blender-overview/
 │   │   └── ...
 │   └── [another tool]/
 │       └── ...
@@ -126,25 +145,5 @@ game-development-documentation/
 - Delete merged branches after successful integration
 - Keep branch names consistent with the file names
 - Always create branches from an up-to-date `develop` branch
-
-## 🚀 Getting Started
-
-1. Clone the repository:
-   ```bash
-   git clone git@github.com:JonYoshioka/game-development-documentation.git
-   cd game-development-documentation/game-development-documentation
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Begin writing your documentation following the guidelines above!
 
 ---

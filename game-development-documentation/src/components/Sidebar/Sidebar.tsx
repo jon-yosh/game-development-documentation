@@ -4,32 +4,22 @@ import "./Sidebar.css"
 
 const docs = {
     blender: [
-        { title: "Intro to Blender", id: "intro-to-blender" },
-        { title: "Modeling Basics", id: "modeling-basics" },
     ],
     godot: [
-        { title: "Character Movement v1", id: "character-movement-v1" },
-        { title: "Character Movement v2", id: "character-movement-v2" },
     ],
     git: [
-        { title: "Git Tree Alias", id: "git/git-tree-alias/v1/git-tree-alias-v1" },
-        { title: "Character Movement v2", id: "character-movement-v2" },
+        {
+            title: "Git Tree Alias",
+            id: "git/git-tree-alias/git-tree-alias"
+        },
     ],
     react: [
-        { title: "Character Movement v1", id: "character-movement-v1" },
-        { title: "Character Movement v2", id: "character-movement-v2" },
     ],
     procreate: [
-        { title: "Character Movement v1", id: "character-movement-v1" },
-        { title: "Character Movement v2", id: "character-movement-v2" },
     ],
     inkscape: [
-        { title: "Character Movement v1", id: "character-movement-v1" },
-        { title: "Character Movement v2", id: "character-movement-v2" },
     ],
     gimp: [
-        { title: "Character Movement v1", id: "character-movement-v1" },
-        { title: "Character Movement v2", id: "character-movement-v2" },
     ],
 };
 
@@ -38,6 +28,10 @@ const Sidebar = () => {
     const [showBlender, setShowBlender] = useState(true);
     const [showGodot, setShowGodot] = useState(true);
     const [showGit, setShowGit] = useState(true);
+    const [showReact, setShowReact] = useState(true);
+    const [showProcreate, setShowProcreate] = useState(true);
+    const [showInkscape, setShowInkscape] = useState(true);
+    const [showGimp, setShowGimp] = useState(true);
 
     return (
         <aside className={`sidebar-wrapper ${collapsed ? "collapsed" : ""}`}>
@@ -101,7 +95,7 @@ const Sidebar = () => {
                             )}
                         </div>
 
-                        {/* git */}
+                        {/* Git */}
                         <div className="section">
                             <button
                                 onClick={() => setShowGit(!showGit)}
@@ -121,6 +115,118 @@ const Sidebar = () => {
                             {showGit && (
                                 <ul className="link-list">
                                     {docs.git.map(({ title, id }) => (
+                                        <li key={id}>
+                                            <Link to={`/docs/${id}`}>{title}</Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
+
+                        {/* React */}
+                        <div className="section">
+                            <button
+                                onClick={() => setShowReact(!showReact)}
+                                className="section-title"
+                            >
+                                <span
+                                    style={{
+                                        display: "inline-block",
+                                        transition: "transform 0.3s ease",
+                                        transform: showReact ? "rotate(90deg)" : "rotate(0deg)",
+                                    }}
+                                >
+                                    ▶
+                                </span>{" "}
+                                React
+                            </button>
+                            {showReact && (
+                                <ul className="link-list">
+                                    {docs.react.map(({ title, id }) => (
+                                        <li key={id}>
+                                            <Link to={`/docs/${id}`}>{title}</Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
+
+                        {/* Procreate */}
+                        <div className="section">
+                            <button
+                                onClick={() => setShowProcreate(!showProcreate)}
+                                className="section-title"
+                            >
+                                <span
+                                    style={{
+                                        display: "inline-block",
+                                        transition: "transform 0.3s ease",
+                                        transform: showProcreate ? "rotate(90deg)" : "rotate(0deg)",
+                                    }}
+                                >
+                                    ▶
+                                </span>{" "}
+                                Procreate
+                            </button>
+                            {showProcreate && (
+                                <ul className="link-list">
+                                    {docs.procreate.map(({ title, id }) => (
+                                        <li key={id}>
+                                            <Link to={`/docs/${id}`}>{title}</Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
+
+                        {/* Inkscape */}
+                        <div className="section">
+                            <button
+                                onClick={() => setShowInkscape(!showInkscape)}
+                                className="section-title"
+                            >
+                                <span
+                                    style={{
+                                        display: "inline-block",
+                                        transition: "transform 0.3s ease",
+                                        transform: showInkscape ? "rotate(90deg)" : "rotate(0deg)",
+                                    }}
+                                >
+                                    ▶
+                                </span>{" "}
+                                Inkscape
+                            </button>
+                            {showInkscape && (
+                                <ul className="link-list">
+                                    {docs.inkscape.map(({ title, id }) => (
+                                        <li key={id}>
+                                            <Link to={`/docs/${id}`}>{title}</Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
+
+                        {/* Gimp */}
+                        <div className="section">
+                            <button
+                                onClick={() => setShowGimp(!showGimp)}
+                                className="section-title"
+                            >
+                                <span
+                                    style={{
+                                        display: "inline-block",
+                                        transition: "transform 0.3s ease",
+                                        transform: showGimp ? "rotate(90deg)" : "rotate(0deg)",
+                                    }}
+                                >
+                                    ▶
+                                </span>{" "}
+                                Gimp
+                            </button>
+                            {showGimp && (
+                                <ul className="link-list">
+                                    {docs.gimp.map(({ title, id }) => (
                                         <li key={id}>
                                             <Link to={`/docs/${id}`}>{title}</Link>
                                         </li>
