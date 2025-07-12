@@ -7,10 +7,7 @@ export default function MarkdownPage() {
     const [content, setContent] = useState('');
 
     useEffect(() => {
-        // Full path after `/docs`
-        const mdPath = location.pathname.replace('/docs', '');
-
-        fetch(`/docs${mdPath}.md`)
+        fetch(`${location.pathname}.md`)
             .then(res => {
                 if (!res.ok) throw new Error('Not found');
                 return res.text();
