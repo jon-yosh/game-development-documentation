@@ -151,3 +151,4 @@ game-development-documentation/
 - Always create branches from an up-to-date `develop` branch
 
 ---
+[Link to repository on Github](https://github.com/JonYoshioka/game-development-documentation?tab=readme-ov-file)
