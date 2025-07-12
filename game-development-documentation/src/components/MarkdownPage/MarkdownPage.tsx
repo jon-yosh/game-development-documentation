@@ -8,7 +8,8 @@ export default function MarkdownPage() {
     const [content, setContent] = useState('');
 
     useEffect(() => {
-        fetch(`${location.pathname}.md`)
+        const fullPath = `${import.meta.env.BASE_URL}${location.pathname}.md`;
+        fetch(fullPath)
             .then(res => {
                 if (!res.ok) throw new Error('Not found');
                 return res.text();

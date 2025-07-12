@@ -3,6 +3,8 @@ import Sidebar from './components/Sidebar/Sidebar';
 import MarkdownPage from './components/MarkdownPage/MarkdownPage';
 import './index.css';
 
+const base = import.meta.env.BASE_URL;
+
 function Intro() {
   return (
     <div className="intro-content">
@@ -20,7 +22,7 @@ function Intro() {
 
 function App() {
   return (
-    <Router>
+    <Router basename={base}>
       <div className="app-container">
         <header className="header tiled-background">
           <Link to="/">
