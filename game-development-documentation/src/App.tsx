@@ -5,21 +5,6 @@ import './index.css';
 
 const base = import.meta.env.BASE_URL;
 
-function Intro() {
-  return (
-    <div className="intro-content">
-      <p>
-        Welcome to the documentation site! Here you'll find tutorials and articles for tools like Blender and Godot.
-        Use the sidebar to navigate between topics and versions of each article.
-      </p>
-      <p>
-        This site is designed for beginners and intermediate developers working on indie games or learning asset
-        creation pipelines.
-      </p>
-    </div>
-  );
-}
-
 function App() {
   return (
     <Router basename={base}>
@@ -33,7 +18,7 @@ function App() {
         <div className="content-layout">
           <Sidebar />
           <Routes>
-            <Route path="/" element={<Intro />} />
+            <Route path="/" element={<MarkdownPage />} />
             <Route path="/docs/*" element={<MarkdownPage />} />
           </Routes>
         </div>
