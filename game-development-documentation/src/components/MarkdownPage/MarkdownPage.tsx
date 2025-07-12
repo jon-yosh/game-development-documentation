@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { useEffect, useState } from 'react';
+import "./MarkdownPage.css"
 
 export default function MarkdownPage() {
     const location = useLocation();
@@ -17,7 +18,7 @@ export default function MarkdownPage() {
     }, [location.pathname]);
 
     return (
-        <div className="markdown-page">
+        <div className="markdown-content">
             <ReactMarkdown>{content}</ReactMarkdown>
         </div>
     );

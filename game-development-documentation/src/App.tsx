@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Sidebar from './components/Sidebar';
-import MarkdownPage from './components/MarkdownPage';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Sidebar from './components/Sidebar/Sidebar';
+import MarkdownPage from './components/MarkdownPage/MarkdownPage';
 import './index.css';
 
 function Intro() {
@@ -23,7 +23,9 @@ function App() {
     <Router>
       <div className="app-container">
         <header className="header">
-          <h1>Game Development Docs</h1>
+          <Link to="/">
+            <h1>Game Development Docs</h1>
+          </Link>
         </header>
 
         <div className="content-layout">
