@@ -22,9 +22,9 @@ function App() {
   return (
     <Router>
       <div className="app-container">
-        <header className="header">
+        <header className="header tiled-background">
           <Link to="/">
-            <h1>Game Development Docs</h1>
+            <h1 className='website-title'>Game Development Docs</h1>
           </Link>
         </header>
 

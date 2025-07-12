@@ -29,9 +29,9 @@
 /* Sidebar panel */
 .sidebar {
     width: 200px;
-    background-color: #f9f9f9;
+    background-color: var(--color-light);
     padding: 1rem;
-    border: 1px solid #ddd;
+    box-shadow: 1px 1px .3em var(--color-black);
     border-radius: 4px;
     font-size: 0.9rem;
     box-sizing: border-box;
@@ -41,7 +41,7 @@
 .sidebar-toggle {
     width: 32px;
     height: 32px;
-    background-color: #007bff;
+    background-color: var(--color-dark);
     border: none;
     color: white;
     font-size: 1.2rem;
