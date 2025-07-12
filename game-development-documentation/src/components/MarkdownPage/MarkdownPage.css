@@ -1,0 +1,24 @@
+.markdown-content {
+    width: 60vw;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.sidebar-wrapper.collapsed ~ .markdown-content {
+    width: 85vw;
+}
+
+.markdown-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+}
+
+.markdown-content pre {
+    overflow-x: auto;
+    background: var(--color-light);
+    color: #f8f8f2;
+    padding: 1rem;
+    border-radius: 6px;
+} 

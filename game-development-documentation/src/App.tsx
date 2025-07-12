@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Sidebar from './components/Sidebar/Sidebar';
+import MarkdownPage from './components/MarkdownPage/MarkdownPage';
+import './index.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function Intro() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+    <div className="intro-content">
+      <p>
+        Welcome to the documentation site! Here you'll find tutorials and articles for tools like Blender and Godot.
+        Use the sidebar to navigate between topics and versions of each article.
       </p>
-    </>
-  )
+      <p>
+        This site is designed for beginners and intermediate developers working on indie games or learning asset
+        creation pipelines.
+      </p>
+    </div>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <div className="app-container">
+        <header className="header tiled-background">
+          <Link to="/">
+            <h1 className='website-title'>Game Development Docs</h1>
+          </Link>
+        </header>
+
+        <div className="content-layout">
+          <Sidebar />
+          <Routes>
+            <Route path="/" element={<Intro />} />
+            <Route path="/docs/*" element={<MarkdownPage />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
+  );
+}
+
+export default App;

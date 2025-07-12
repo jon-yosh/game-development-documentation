@@ -1,0 +1,98 @@
+.sidebar-wrapper {
+    position: relative;
+    width: 232px;
+    overflow: visible;
+}
+
+.sidebar-content {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    width: 232px;
+    transition: transform 0.3s ease;
+}
+
+/* When collapsed, slide left by 200px (sidebar width) */
+.sidebar-wrapper.collapsed .sidebar-content {
+    transform: translateX(-200px);
+}
+
+.sidebar-wrapper.collapsed .sidebar {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar-wrapper.collapsed {
+    width: 0rem;
+}
+
+/* Sidebar panel */
+.sidebar {
+    width: 200px;
+    background-color: var(--color-light);
+    padding: 1rem;
+    box-shadow: 1px 1px .3em var(--color-black);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+/* Toggle button */
+.sidebar-toggle {
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-dark);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: -1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+/* Chevron rotation */
+.sidebar-toggle.rotated {
+    transform: rotate(180deg);
+    margin-left: -1.5rem;
+    transition: margin-left .3s ease-in-out;
+}
+
+/* Section styles */
+.section {
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    user-select: none;
+}
+
+.link-list {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.link-list li {
+    margin-bottom: 0.3rem;
+}
+
+.link-list a {
+    text-decoration: none;
+    color: #333;
+}
+
+.link-list a:hover {
+    text-decoration: underline;
+}
