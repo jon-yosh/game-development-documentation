@@ -29,6 +29,7 @@ rm -rf ./*
 
 # Copy build files
 cp -r "$TEMP_DIR"/* ./
+cp ./index.html ./404.html
 
 # Commit and push
 echo "Committing and pushing..."
