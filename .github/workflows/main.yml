@@ -1,12 +1,14 @@
-name: Build and Deploy to Main
+name: Build and Deploy to gh-pages
 
 on:
   pull_request:
     branches: [ main ]
+    types: [ closed ]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     
     steps:
     - name: Checkout repository
@@ -34,8 +36,14 @@ jobs:
         mkdir -p /tmp/dist-backup
         cp -r ./game-development-documentation/dist/* /tmp/dist-backup/
 
+    - name: Create fresh gh-pages branch
+      run: |
+        git push origin --delete gh-pages || true
+        git checkout --orphan gh-pages
+
     - name: Clear repository contents
       run: |
+        # Remove all files and folders except .git
         rm -rf ./*
 
     - name: Move dist contents to root
@@ -51,4 +59,4 @@ jobs:
       run: |
         git add .
         git commit -m "Deploy built files [skip ci]" || exit 0
-        git push origin main
+        git push --force origin gh-pages
