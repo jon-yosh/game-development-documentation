@@ -12,6 +12,10 @@ export const docs = {
             title: "Git Alias Shortcuts",
             id: "git/git-alias-shortcuts/git-alias-shortcuts"
         },
+        {
+            title: "Github SSH Keys",
+            id: "git/github-ssh-keys/github-ssh-keys"
+        },
     ],
     react: [
         {
