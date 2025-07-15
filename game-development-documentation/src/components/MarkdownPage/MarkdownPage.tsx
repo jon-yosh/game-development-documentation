@@ -9,7 +9,7 @@ export default function MarkdownPage() {
 
     useEffect(() => {
         const base = import.meta.env.BASE_URL;
-        const path = location.pathname === '/' ? `${base}/README.md` : `${base}${location.pathname}.md`;
+        const path = location.pathname === '/' ? `${base}/README.md` : `${base}${location.pathname}.mdx`;
 
         fetch(path)
             .then(res => {
