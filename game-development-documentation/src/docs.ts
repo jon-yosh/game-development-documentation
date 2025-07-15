@@ -2,6 +2,10 @@ export const docs = {
     blender: [
     ],
     godot: [
+        {
+            title: "Export Godot Build",
+            id: "godot/export-godot-build/export-godot-build"
+        },
     ],
     git: [
         {
