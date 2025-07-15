@@ -83,9 +83,19 @@ When prompted:
 - Enter a secure passphrase (recommended) or press Enter for no passphrase
 
 ### Step 3: Add SSH Key to ssh-agent
-Start the ssh-agent service:
+
+Check if OpenSSH Client is installed
+```sh
+Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
+```
+
+Install OpenSSH Client if not present
+```sh
+Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+```
+
+Start the ssh-agent service, and in powershell as administrator
 ```cmd
-# In PowerShell (run as Administrator)
 Get-Service -Name ssh-agent | Set-Service -StartupType Manual
 Start-Service ssh-agent
 ```
