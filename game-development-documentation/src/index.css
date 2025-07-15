@@ -11,7 +11,7 @@ html, body {
   --color-medium: #987554;    /* Medium brown */
   --color-dark: #664229;      /* Dark brown */
   --color-black: #333333;     /* Black */
-  --color-white: #FFFAF1;     /* White */
+  --color-white: #ECE5D8;     /* White */
 
   background-color: var(--color-white);
 }
@@ -36,6 +36,7 @@ a {
 
 .website-title {
   font-size: 2em;
+  color: black;
 }
 
 .header {

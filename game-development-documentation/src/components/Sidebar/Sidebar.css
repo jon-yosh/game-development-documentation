@@ -31,16 +31,17 @@
     width: 200px;
     background-color: var(--color-light);
     padding: 1rem;
-    box-shadow: 1px 1px .3em var(--color-black);
-    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.30);
+    border: solid 1px var(--color-secondary);
+    border-radius: 10px;
     font-size: 0.9rem;
     box-sizing: border-box;
 }
 
 /* Toggle button */
 .sidebar-toggle {
-    width: 32px;
-    height: 32px;
+    width: 2.2rem;
+    height: 2.2rem;
     background-color: var(--color-dark);
     border: none;
     color: white;
@@ -56,10 +57,10 @@
     user-select: none;
 }
 
-/* Chevron rotation */
+/* Arrow rotation */
 .sidebar-toggle.rotated {
     transform: rotate(180deg);
-    margin-left: -1.5rem;
+    margin-left: 0rem;
     transition: margin-left .3s ease-in-out;
 }
 
@@ -95,4 +96,8 @@
 
 .link-list a:hover {
     text-decoration: underline;
+}
+
+.arrow {
+    font-size: 0.9rem;
 }

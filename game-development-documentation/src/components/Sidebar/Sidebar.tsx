@@ -41,7 +41,7 @@ const Sidebar = () => {
 
                         {/* Home */}
                         <h3>
-                            <Link to={'/'}>{"Home"}</Link>
+                            <Link style={{color: "black"}} to={'/'}>{"Home"}</Link>
                         </h3>
 
                         {/* Blender */}
@@ -249,7 +249,7 @@ const Sidebar = () => {
                     onClick={() => setCollapsed(!collapsed)}
                     aria-label={collapsed ? "Show Sidebar" : "Hide Sidebar"}
                 >
-                    <span className="chevron">‹</span>
+                    <span className="arrow">◀</span>
                 </button>
             </div>
         </aside>
