@@ -52,7 +52,7 @@ To view the page live, visit: [https://jonyoshioka.github.io/game-development-do
    ├── godot/
    │   └── your-article-name/
    │        ├── assets/
-   │        └── your-article-name.md
+   │        └── your-article-name.mdx
    ├── git/
    ├── react/
    ├── procreate/
@@ -62,10 +62,10 @@ To view the page live, visit: [https://jonyoshioka.github.io/game-development-do
 
 3. **Name your file** using the same convention as the branch:
    ```
-   your-article-name.md
+   your-article-name.mdx
    ```
 
-4. **Update `Sidebar.tsx`** to include path to markdown file along with a title for the article to be shown on the sidebar:
+4. **Update `docs.ts`** to include path to markdown file along with a title for the article to be shown on the sidebar:
 
    ```
    ...
@@ -86,7 +86,7 @@ To view the page live, visit: [https://jonyoshioka.github.io/game-development-do
    git checkout -b your-article-name
    ```
 
-3. **Edit the new version file** (`your-article-name.md`) with your updates
+3. **Edit the new version file** (`your-article-name.mdx`) with your updates
 
 4. **Commit both files**:
    ```bash
@@ -123,32 +123,26 @@ To view the page live, visit: [https://jonyoshioka.github.io/game-development-do
 game-development-documentation/
 ├── src/
 │   └── (React application files)
-├── docs/
-│   ├── godot/
-│   │   ├── character-movement/
-│   │   │    ├── assets/
-│   │   │    │    └── img1.jpg
-│   │   │    └── character-movement.md
-│   │   └──── inventory-system/
-│   │        └── inventory-system.md
-│   ├── blender/
-│   │   ├── blender-overview/
-│   │   └── ...
-│   └── [another tool]/
-│       └── ...
-├── README.md
-└── package.json
+└── public/
+    └── docs/
+         ├── godot/
+         │   ├── character-movement/
+         │   │    ├── assets/
+         │   │    │    └── img1.jpg
+         │   │    └── character-movement.mdx
+         │   └──── inventory-system/
+         │        └── inventory-system.mdx
+         ├── blender/
+         │   ├── blender-overview/
+         │   └── ...
+         └── [another tool]/
+            └── ...
 ```
 
 ## ✅ Best Practices
 
 ### Writing Guidelines
 - Add diagrams or images in an `assets/` folder within the category
-
-### Branch Management
-- Delete merged branches after successful integration
-- Keep branch names consistent with the file names
-- Always create branches from an up-to-date `develop` branch
 
 ---
 [Link to repository on Github](https://github.com/JonYoshioka/game-development-documentation?tab=readme-ov-file)
