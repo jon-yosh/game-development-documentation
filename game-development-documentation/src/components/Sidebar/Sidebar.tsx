@@ -1,27 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { docs } from "../../docs";
 import "./Sidebar.css"
-
-const docs = {
-    blender: [
-    ],
-    godot: [
-    ],
-    git: [
-        {
-            title: "Git Tree Alias",
-            id: "git/git-tree-alias/git-tree-alias"
-        },
-    ],
-    react: [
-    ],
-    procreate: [
-    ],
-    inkscape: [
-    ],
-    gimp: [
-    ],
-};
 
 const Sidebar = () => {
     const [collapsed, setCollapsed] = useState(false);

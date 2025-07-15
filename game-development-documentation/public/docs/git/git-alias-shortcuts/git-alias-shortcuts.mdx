@@ -1,0 +1,69 @@
+# Git Alias Shortcuts
+
+## 📟 Terminal Commands
+Set up all the aliases:
+
+```sh
+# Common git commands
+git config --global alias.cm "commit -m"
+git config --global alias.co "checkout"
+git config --global alias.st "status"
+git config --global alias.cob "checkout -b"
+git config --global alias.brd "branch -d"
+git config --global alias.com "checkout main"
+git config --global alias.fp "fetch --prune"
+git config --global alias.pl "pull"
+
+# Git tree makes git history easy to read
+git config --global alias.tree "log --graph --all --decorate --pretty=format:'%C(yellow)%h%Creset - %Cgreen%ad%Creset %C(blue)[%an]%Creset %C(auto)%d%Creset %s' --date=short"
+```
+> You can simply copy and paste this whole code snippet in the terminal to add the aliases
+
+----
+
+## How to Use Git Aliases
+Simply run the shortcut commands in the terminal
+
+### Available Aliases
+
+| Alias | Command | Description |
+|-------|---------|-------------|
+| `git cm` | `commit -m` | Commit with message |
+| `git co` | `checkout` | Switch branches or restore files |
+| `git st` | `status` | Show working tree status |
+| `git cob` | `checkout -b` | Create and switch to new branch |
+| `git brd` | `branch -d` | Delete a branch |
+| `git com` | `checkout main` | Switch to main branch |
+| `git fp` | `fetch --prune` | Fetch and remove stale remote references |
+| `git pl` | `pull` | Pull changes from remote |
+| `git tree` | `log --graph...` | Display commit history as a visual tree |
+
+## Example of Workflow
+
+```sh
+# Check current status
+git st
+
+# Create new feature branch
+git cob feature/new-feature
+
+# Make changes, then commit
+git cm "Add new feature"
+
+# Switch back to main
+git com
+
+# Pull latest changes
+git pl
+
+# Clean up old remote references
+git fp
+
+# View project history
+git tree
+```
+
+### Example Output of git tree
+This is `git tree` used on the blender repository:
+
+![Blender git tree](./assets/blender-git-tree.png)

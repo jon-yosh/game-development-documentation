@@ -34,6 +34,35 @@ a {
   color: var(--color-dark);
 }
 
+blockquote {
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  border-left: 4px solid var(--color-medium);
+  background-color: rgba(255, 255, 255, .4);
+  font-style: italic;
+}
+
+/* Table CSS */
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border-right: 1px solid var(--color-dark);
+  border-bottom: 1px solid var(--color-dark);
+  padding: 1rem;
+}
+
+/* Remove borders from edges */
+td:last-child, th:last-child {
+  border-right: none;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+/* END Table CSS */
+
 .website-title {
   font-size: 2em;
   color: black;

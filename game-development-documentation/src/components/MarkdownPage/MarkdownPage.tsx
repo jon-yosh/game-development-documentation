@@ -2,6 +2,7 @@ import { useLocation } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { useEffect, useState } from 'react';
 import "./MarkdownPage.css"
+import remarkGfm from 'remark-gfm';
 
 export default function MarkdownPage() {
     const location = useLocation();
@@ -22,7 +23,7 @@ export default function MarkdownPage() {
 
     return (
         <div className="markdown-content">
-            <ReactMarkdown>{content}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
         </div>
     );
 }
