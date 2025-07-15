@@ -37,8 +37,8 @@ git add .
 git commit -m "Deploy to gh-pages" || echo "Nothing to commit"
 git push origin gh-pages --force
 
-# Switch back to develop
-git checkout develop
+# Switch back to main
+git checkout main
 
 # Cleanup
 rm -rf "$TEMP_DIR"
