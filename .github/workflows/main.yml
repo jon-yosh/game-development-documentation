@@ -1,0 +1,54 @@
+name: Build and Deploy to Main
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: './game-development-documentation/package-lock.json'
+
+    - name: Install dependencies
+      working-directory: ./game-development-documentation
+      run: npm ci
+
+    - name: Build project
+      working-directory: ./game-development-documentation
+      run: npm run build
+
+    - name: Save dist contents to temporary location
+      run: |
+        mkdir -p /tmp/dist-backup
+        cp -r ./game-development-documentation/dist/* /tmp/dist-backup/
+
+    - name: Clear repository contents
+      run: |
+        rm -rf ./*
+
+    - name: Move dist contents to root
+      run: |
+        cp -r /tmp/dist-backup/* ./
+
+    - name: Configure Git
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+
+    - name: Commit and push changes
+      run: |
+        git add .
+        git commit -m "Deploy built files [skip ci]" || exit 0
+        git push origin main
