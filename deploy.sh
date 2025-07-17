@@ -50,4 +50,6 @@ cd ..
 
 git branch -D gh-pages
 
+rm -rf ./docs
+
 echo "✅ Deployment complete!"
