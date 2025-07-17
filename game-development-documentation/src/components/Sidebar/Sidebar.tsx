@@ -44,7 +44,7 @@ const Sidebar = () => {
                             {showBlender && (
                                 <ul className="link-list">
                                     {docs.blender.map(({ title, id }) => (
-                                        <li key={id}>
+                                        <li className="links" key={id}>
                                             <Link to={`/docs/${id}`}>{title}</Link>
                                         </li>
                                     ))}
@@ -72,7 +72,7 @@ const Sidebar = () => {
                             {showGodot && (
                                 <ul className="link-list">
                                     {docs.godot.map(({ title, id }) => (
-                                        <li key={id}>
+                                        <li className="links" key={id}>
                                             <Link to={`/docs/${id}`}>{title}</Link>
                                         </li>
                                     ))}
@@ -100,7 +100,7 @@ const Sidebar = () => {
                             {showGit && (
                                 <ul className="link-list">
                                     {docs.git.map(({ title, id }) => (
-                                        <li key={id}>
+                                        <li className="links" key={id}>
                                             <Link to={`/docs/${id}`}>{title}</Link>
                                         </li>
                                     ))}
@@ -128,7 +128,7 @@ const Sidebar = () => {
                             {showReact && (
                                 <ul className="link-list">
                                     {docs.react.map(({ title, id }) => (
-                                        <li key={id}>
+                                        <li className="links" key={id}>
                                             <Link to={`/docs/${id}`}>{title}</Link>
                                         </li>
                                     ))}
@@ -156,7 +156,7 @@ const Sidebar = () => {
                             {showProcreate && (
                                 <ul className="link-list">
                                     {docs.procreate.map(({ title, id }) => (
-                                        <li key={id}>
+                                        <li className="links" key={id}>
                                             <Link to={`/docs/${id}`}>{title}</Link>
                                         </li>
                                     ))}
@@ -184,7 +184,7 @@ const Sidebar = () => {
                             {showInkscape && (
                                 <ul className="link-list">
                                     {docs.inkscape.map(({ title, id }) => (
-                                        <li key={id}>
+                                        <li className="links" key={id}>
                                             <Link to={`/docs/${id}`}>{title}</Link>
                                         </li>
                                     ))}
@@ -212,7 +212,7 @@ const Sidebar = () => {
                             {showGimp && (
                                 <ul className="link-list">
                                     {docs.gimp.map(({ title, id }) => (
-                                        <li key={id}>
+                                        <li className="links" key={id}>
                                             <Link to={`/docs/${id}`}>{title}</Link>
                                         </li>
                                     ))}

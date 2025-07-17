@@ -98,6 +98,10 @@
     text-decoration: underline;
 }
 
+.links {
+    padding-bottom: .5rem;
+}
+
 .arrow {
     font-size: 0.9rem;
 }

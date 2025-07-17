@@ -1,5 +1,6 @@
 .markdown-content {
-    width: 60vw;
+    width: 85vw;
+    max-width: 50em;
     line-height: 1.7;
     font-size: 1rem;
     margin-left: auto;
