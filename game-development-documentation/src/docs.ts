@@ -19,6 +19,10 @@ export const docs = {
             id: "godot/block-out-level/block-out-level"
         },
         {
+            title: "Collision Shape 3D",
+            id: "godot/collision-shape-3d/collision-shape-3d"
+        },
+        {
             title: "Godot Lighting",
             id: "godot/godot-lighting/godot-lighting"
         },
