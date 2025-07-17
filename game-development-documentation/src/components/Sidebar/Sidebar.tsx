@@ -3,15 +3,34 @@ import { Link } from "react-router-dom";
 import { docs } from "../../docs";
 import "./Sidebar.css"
 
+// Define the type for docs structure
+type DocItem = {
+    title: string;
+    id: string;
+};
+
+type DocsType = Record<string, DocItem[]>;
+
 const Sidebar = () => {
     const [collapsed, setCollapsed] = useState(false);
-    const [showBlender, setShowBlender] = useState(true);
-    const [showGodot, setShowGodot] = useState(true);
-    const [showGit, setShowGit] = useState(true);
-    const [showReact, setShowReact] = useState(true);
-    const [showProcreate, setShowProcreate] = useState(true);
-    const [showInkscape, setShowInkscape] = useState(true);
-    const [showGimp, setShowGimp] = useState(true);
+    
+    // Get section names from docs object
+    const sectionNames = Object.keys(docs as DocsType);
+    
+    // Initialize state for all sections
+    const [sectionVisibility, setSectionVisibility] = useState<Record<string, boolean>>(
+        sectionNames.reduce((acc, section) => {
+            acc[section] = true;
+            return acc;
+        }, {} as Record<string, boolean>)
+    );
+
+    const toggleSection = (sectionName: string) => {
+        setSectionVisibility(prev => ({
+            ...prev,
+            [sectionName]: !prev[sectionName]
+        }));
+    };
 
     return (
         <aside className={`sidebar-wrapper ${collapsed ? "collapsed" : ""}`}>
@@ -24,201 +43,35 @@ const Sidebar = () => {
                             <Link style={{color: "black"}} to={'/'}>{"Home"}</Link>
                         </h3>
 
-                        {/* Blender */}
-                        <div className="section">
-                            <button
-                                onClick={() => setShowBlender(!showBlender)}
-                                className="section-title"
-                            >
-                                <span
-                                    style={{
-                                        display: "inline-block",
-                                        transition: "transform 0.3s ease",
-                                        transform: showBlender ? "rotate(90deg)" : "rotate(0deg)",
-                                    }}
+                        {/* Dynamic Sections */}
+                        {sectionNames.map(sectionName => (
+                            <div key={sectionName} className="section">
+                                <button
+                                    onClick={() => toggleSection(sectionName)}
+                                    className="section-title"
                                 >
-                                    ▶
-                                </span>{" "}
-                                Blender
-                            </button>
-                            {showBlender && (
-                                <ul className="link-list">
-                                    {docs.blender.map(({ title, id }) => (
-                                        <li className="links" key={id}>
-                                            <Link to={`/docs/${id}`}>{title}</Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
-
-                        {/* Godot */}
-                        <div className="section">
-                            <button
-                                onClick={() => setShowGodot(!showGodot)}
-                                className="section-title"
-                            >
-                                <span
-                                    style={{
-                                        display: "inline-block",
-                                        transition: "transform 0.3s ease",
-                                        transform: showGodot ? "rotate(90deg)" : "rotate(0deg)",
-                                    }}
-                                >
-                                    ▶
-                                </span>{" "}
-                                Godot
-                            </button>
-                            {showGodot && (
-                                <ul className="link-list">
-                                    {docs.godot.map(({ title, id }) => (
-                                        <li className="links" key={id}>
-                                            <Link to={`/docs/${id}`}>{title}</Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
-
-                        {/* Git */}
-                        <div className="section">
-                            <button
-                                onClick={() => setShowGit(!showGit)}
-                                className="section-title"
-                            >
-                                <span
-                                    style={{
-                                        display: "inline-block",
-                                        transition: "transform 0.3s ease",
-                                        transform: showGit ? "rotate(90deg)" : "rotate(0deg)",
-                                    }}
-                                >
-                                    ▶
-                                </span>{" "}
-                                Git
-                            </button>
-                            {showGit && (
-                                <ul className="link-list">
-                                    {docs.git.map(({ title, id }) => (
-                                        <li className="links" key={id}>
-                                            <Link to={`/docs/${id}`}>{title}</Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
-
-                        {/* React */}
-                        <div className="section">
-                            <button
-                                onClick={() => setShowReact(!showReact)}
-                                className="section-title"
-                            >
-                                <span
-                                    style={{
-                                        display: "inline-block",
-                                        transition: "transform 0.3s ease",
-                                        transform: showReact ? "rotate(90deg)" : "rotate(0deg)",
-                                    }}
-                                >
-                                    ▶
-                                </span>{" "}
-                                React
-                            </button>
-                            {showReact && (
-                                <ul className="link-list">
-                                    {docs.react.map(({ title, id }) => (
-                                        <li className="links" key={id}>
-                                            <Link to={`/docs/${id}`}>{title}</Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
-
-                        {/* Procreate */}
-                        <div className="section">
-                            <button
-                                onClick={() => setShowProcreate(!showProcreate)}
-                                className="section-title"
-                            >
-                                <span
-                                    style={{
-                                        display: "inline-block",
-                                        transition: "transform 0.3s ease",
-                                        transform: showProcreate ? "rotate(90deg)" : "rotate(0deg)",
-                                    }}
-                                >
-                                    ▶
-                                </span>{" "}
-                                Procreate
-                            </button>
-                            {showProcreate && (
-                                <ul className="link-list">
-                                    {docs.procreate.map(({ title, id }) => (
-                                        <li className="links" key={id}>
-                                            <Link to={`/docs/${id}`}>{title}</Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
-
-                        {/* Inkscape */}
-                        <div className="section">
-                            <button
-                                onClick={() => setShowInkscape(!showInkscape)}
-                                className="section-title"
-                            >
-                                <span
-                                    style={{
-                                        display: "inline-block",
-                                        transition: "transform 0.3s ease",
-                                        transform: showInkscape ? "rotate(90deg)" : "rotate(0deg)",
-                                    }}
-                                >
-                                    ▶
-                                </span>{" "}
-                                Inkscape
-                            </button>
-                            {showInkscape && (
-                                <ul className="link-list">
-                                    {docs.inkscape.map(({ title, id }) => (
-                                        <li className="links" key={id}>
-                                            <Link to={`/docs/${id}`}>{title}</Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
-
-                        {/* Gimp */}
-                        <div className="section">
-                            <button
-                                onClick={() => setShowGimp(!showGimp)}
-                                className="section-title"
-                            >
-                                <span
-                                    style={{
-                                        display: "inline-block",
-                                        transition: "transform 0.3s ease",
-                                        transform: showGimp ? "rotate(90deg)" : "rotate(0deg)",
-                                    }}
-                                >
-                                    ▶
-                                </span>{" "}
-                                Gimp
-                            </button>
-                            {showGimp && (
-                                <ul className="link-list">
-                                    {docs.gimp.map(({ title, id }) => (
-                                        <li className="links" key={id}>
-                                            <Link to={`/docs/${id}`}>{title}</Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
+                                    <span
+                                        style={{
+                                            display: "inline-block",
+                                            transition: "transform 0.3s ease",
+                                            transform: sectionVisibility[sectionName] ? "rotate(90deg)" : "rotate(0deg)",
+                                        }}
+                                    >
+                                        ▶
+                                    </span>{" "}
+                                    {sectionName.charAt(0).toUpperCase() + sectionName.slice(1)}
+                                </button>
+                                {sectionVisibility[sectionName] && (
+                                    <ul className="link-list">
+                                        {(docs as DocsType)[sectionName].map(({ title, id }) => (
+                                            <li className="links" key={id}>
+                                                <Link to={`/docs/${id}`}>{title}</Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
+                        ))}
 
                         {/* End of Sections */}
                     </div>

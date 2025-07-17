@@ -1,13 +1,29 @@
 # Godot Lighting
 
+## Lighting Types and Use Cases
+### 3D Lights
+
+| Light Type | Description | Use Cases |
+|------------|-------------|----------|
+| **DirectionalLight3D** | Light from distant source (sun/moon) | Outdoor scenes, global lighting |
+| **OmniLight3D** | Point light radiating in all directions | Light bulbs, torches, explosions |
+| **SpotLight3D** | Cone-shaped directional light | Flashlights, stage lights, headlights |
+
+### 2D Lights
+
+| Light Type | Description | Use Cases |
+|------------|-------------|-----------|
+| **PointLight2D** | Point light for 2D scenes | 2D ambient lighting, effects |
+| **DirectionalLight2D** | Directional light for 2D scenes | 2D global lighting |
+
 ## World Lighting
 
+1. To setup directional lighting click on the vertical dots: **`⋮`**
 ![Directional Light](./assets/directional-light.png)
 
-To setup directional lighting click on the vertical dots: **`⋮`**
 
+2. Click **Add Sun to Scene** to add a **DirectionalLight3D** node to the scene
 ![Add Sun](./assets/add-sun.png)
-Click **Add Sun to Scene** to add a **DirectionalLight3D** node to the scene
 
+3. Click **Add Environment to Scene** to add a **WorldEnvironment** node to the scene
 ![Add Environment to Scene](./assets/add-environment.png)
-Click **Add Environment to Scene** to add a **WorldEnvironment** node to the scene

@@ -23,6 +23,10 @@ export const docs = {
             id: "godot/collision-shape-3d/collision-shape-3d"
         },
         {
+            title: "Reusing Node Properties",
+            id: "godot/reusing-properties/reusing-properties"
+        },
+        {
             title: "Godot Lighting",
             id: "godot/godot-lighting/godot-lighting"
         },
