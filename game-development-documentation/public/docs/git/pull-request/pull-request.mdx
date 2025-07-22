@@ -49,9 +49,44 @@ Add metadata
 Cancel
 ```
 
-5. Continuing in browser will open a browser and you can complete the next steps there:
+5. **Continue in browser** will open a browser and you can complete the next steps there
 
 ### Using Sourcetree
 
+1. Ensure that your branch is pushed
+```sh
+git push origin feature-branch-name
+```
+
+2. You can either go to GitHub and create a pull request there
+![](./assets/gh-pull-request.png)
+
+
+5. This will open a browser and you can complete the next steps there
+
+## Pull Request Final Steps
+When you are taken to the browser you will see this:
+![](./assets/create-pr-in-browser.png)
+
+**Make sure you check:**
+1. **base:** is the correct branch you want to merge to usually it is main or develop
+
+2. **compare:** is the branch that you have created your feature on
+
+3. **Create pull request** when you verified the branches are correct
 
 ## Reviewing a Pull Request
+1. To review a pull request open up the **Pull requests** tab and select the PR you want to review
+![](./assets/pull-requests-tab.png)
+
+2. Switch to the **Files changed** tab
+![](./assets/changed-files.png)
+
+3. Click on the files to see the changes
+![](./assets/review-files.png) 
+
+4. When you are ready select **Review changes** and make any comments there
+![](./assets/review-changes.png)
+
+5. Finally you can return to the **Conversation** tab and either **Merge pull request** or **Close pull request**
+![](./assets/close-pr.png)
