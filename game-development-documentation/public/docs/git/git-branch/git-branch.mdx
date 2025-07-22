@@ -3,11 +3,55 @@
 ## Creating a Branch
 
 ### Using Command Line
+There are two ways to create a branch the same way.
+1. Use 2 commands
+```
+git branch <branch-name>
+git checkout <branch-name>
+```
+2. Use 1 command
+```
+git checkout -b <branch-name>
+```
+
+To change branches just use the `checkout` command
+```
+git checkout <branch-name>
+```
 
 ### Using Sourcetree
+
 
 ## Adding Commits
 
 ### Using Command Line
+1. Check the status of the repository
+```
+git status
+```
+- This command shows all edited files
+
+Example Output:
+```
+On branch git-branch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   game-development-documentation/public/docs/git/pull-request/pull-request.mdx
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   game-development-documentation/public/docs/git/git-branch/git-branch.mdx
+```
+2. Stage the files you want to commit
+```
+git add <path-to-file>
+```
+- Or to add all (just make sure you are in the correct folder)
+```
+git add .
+```
+
+3. 
 
 ### Using Sourcetree
