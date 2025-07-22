@@ -1,0 +1,43 @@
+# Gridmap and Mesh Library
+
+## Creating a Mesh Library
+1. Create a **Scene...** in the Mesh Library Folder. Create a Mesh Library folder if one does not exist
+![](./assets/create-scene.png)
+
+2. Update the scene name and root type
+![](./assets/scene-name-root-type.png)
+
+3. Create a **MeshInstance3D** 
+![](./assets/mesh-instance-3d.png)
+
+4. Make sure to add a **Mesh** to the new **MeshInstance3D**
+![](./assets/add-mesh.png)
+
+5. Update properties to your liking
+![](./assets/update-properties.png)
+
+6. Make sure to add a new **StandardMaterial3D** to the **Mesh**.
+![](./assets/add-material.png)
+
+7. Create a **CollisionShape3D** to allow players to click on this square. Click on the **Contextual Mesh** button then **Create Collision Shape...**
+![](./assets/create-collision.png)
+
+8. You can select **Static Body Child** with a **Trimesh** collision shape type then **Create**
+![](./assets/collision-settings.png)
+
+9. Select **Scene > Export As... > MeshLibrary...**
+![](./assets/export-mesh-library.png)
+
+10. Create an appropriate name then select **Save**
+![](./assets/save-mesh-library.png)
+
+11. If you want to add more items to the library. Just create another **MeshInstance3D** and follow the same steps. To check double click on the `.tres` file and you can see that there was another mesh added to the mesh library (the 0 and 1 are the two meshes)
+![](./assets/add-another-mesh.png)
+
+## Create a Gridmap
+
+1. Create a **GridMap**
+![](./assets/create-gridmap.png)
+
+2. Add the **MeshLibrary** you created to the **GridMap**
+![](./assets/select-library.png)

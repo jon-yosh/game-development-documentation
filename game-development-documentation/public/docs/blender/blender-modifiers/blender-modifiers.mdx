@@ -1,0 +1,54 @@
+# Blender Modifiers
+
+**Modifiers** are placed on the object and modifying the shape. Modifiers change the shape but are not actually applied to the shape. In order to actually change the shape, you must **Apply** the modifiers.
+
+## Add Modifier
+
+1. First select the **Modifiers** tab
+![](./assets/modifier-location.png)
+
+2. Search for desired modifier
+![](./assets/search-modifiers.png)
+
+3. To apply the modifier go into **Object Mode**
+![](./assets/edit-mode.png)
+
+4. Then click on the chevron and select **Apply**
+![](./assets/apply-modifier.png)
+
+## Modifiers List
+
+| Description | Image |
+| -------------|-------|
+| **Decimate Modifier** Reduces the number of polygons in an object | ![](./assets/decimate-modifier.gif) |
+| **Mirror Modifier** Creates a symmetrical mesh along the origin point | ![](./assets/mirror-modifier.gif) |
+
+### Tips
+
+#### Mirror Modifier
+1. **Loop Cut** (Ctrl + R) along the axis you want to reflect using the Mirror modifier.
+![](./assets/add-loop-cut.png)
+
+2. Highlight half of the mesh and delete faces (press **X**)
+![](./assets/delete-faces.png)
+
+3. Add the **Mirror Modifier**
+![](./assets/add-mirror-modifier.png)
+
+4. Select the correct axis that you want to be mirrored
+![](./assets/select-correct-axis.png)
+
+5. In order to fix the overlap go back into object mode
+![](./assets/mirror-object-mode.png)
+
+6. To adjust the object origin, while in object mode select on **Options** and enable **Origins**
+![](./assets/affect-only-origins.png)
+
+7. Use the grab tool (press **G** then the axis you want to move z,x,y) and move the origin in the correct location
+![](./assets/move-origins.png)
+
+8. Now your mirror modifier should be working
+![](./assets/mirror-modifier-working.png)
+
+9. It can be useful to enable **clipping** to prevent tears in the middle of the mesh
+![](./assets/mirror-clipping.gif)

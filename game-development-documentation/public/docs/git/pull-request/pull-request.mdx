@@ -1,0 +1,36 @@
+# Pull Request
+**A pull request (PR)** --> Developer's proposed changes to a codebase
+## Basic Flow
+1. **Create a branch** - Make changes in separate branch
+2. **Submit a PR** - Ask to "pull" changes to main branch
+3. **Review** - Other devs review code
+4. **Merge** - If approved, changes get added into codebase
+
+### Why isn't called a Merge Request?
+**Pull Request (GitHub's term)**: Requester's perspective - asking the maintainer to "pull" your changes from your branch into theirs.
+
+**Merge Request (GitLab's term)**: What actually happens - your changes get "merged" into the main branch.
+
+## Creating a Pull Request
+
+### Using Command Line
+1. Ensure that your branch is pushed
+```sh
+git push origin feature-branch-name
+```
+
+2. You can either go to GitHub and create a pull request there
+![](./assets/gh-pull-request.png)
+
+3. You could also download the GitHub Command Line Tools.
+
+    - To install:
+    ```
+    brew install gh
+    ```
+    - Create the pull request:
+    ```
+    gh pr create
+    ```
+
+### Using Sourcetree
