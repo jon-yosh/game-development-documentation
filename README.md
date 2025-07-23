@@ -4,13 +4,13 @@ Welcome to our game development documentation repository! This repository serves
 
 ## Live Page
 
-To view the page live, visit: [https://jonyoshioka.github.io/game-development-documentation/](https://jonyoshioka.github.io/game-development-documentation/)
+To view the page live, visit: [https://www.gamedevdocs.org](https://www.gamedevdocs.org)
 
 ## 🚀 Getting Started
 
 1. Clone the repository:
    ```bash
-   git clone git@github.com:JonYoshioka/game-development-documentation.git
+   git clone git@github.com:jon-yosh/game-development-documentation.git
    cd game-development-documentation/game-development-documentation
    ```
 
@@ -145,4 +145,4 @@ game-development-documentation/
 - Add diagrams or images in an `assets/` folder within the category
 
 ---
-[Link to repository on Github](https://github.com/JonYoshioka/game-development-documentation?tab=readme-ov-file)
+[Link to repository on Github](https://github.com/jon-yosh/game-development-documentation)
