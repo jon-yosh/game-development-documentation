@@ -17,7 +17,7 @@ error: cannot rebase: You have unstaged changes.
 error: Please commit or stash them.
 ```
 
-2. Ensure that you are on the branch you want to rebase
+2. Checkout the branch you want to rebase
 ```
 git checkout feature-branch
 ```
@@ -32,3 +32,18 @@ Successfully rebased and updated refs/heads/documentation.
 ```
 
 ### Using Sourcetree
+
+1. First commit or stash any changes otherwise you will get an error.
+![](./assets/rebase-error.png)
+
+2. **Double-click** on the branch you want to rebase
+![](./assets/checkout-feature-branch.png)
+
+3. **Right-click** on the branch you want to rebase to and select **Rebase current changes onto main**
+![](./assets/right-click-main.png)
+
+4. Select **OK** to confirm the rebase
+![](./assets/confirm-rebase-sourcetree.png)
+
+5. If your rebase was successful you can view it on the history
+![](./assets/successful-rebase-source-tree.png)
