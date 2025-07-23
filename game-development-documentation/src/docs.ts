@@ -71,12 +71,12 @@ export const docs = {
             id: "godot/emulate-mmb-and-numpad/emulate-mmb-and-numpad"
         },
         {
-            title: "Godot Lighting",
-            id: "godot/godot-lighting/godot-lighting"
-        },
-        {
             title: "Transition Between Scenes",
             id: "godot/transition-scenes/transition-scenes"
+        },
+        {
+            title: "Godot Lighting",
+            id: "godot/godot-lighting/godot-lighting"
         },
         {
             title: "Path3D",
