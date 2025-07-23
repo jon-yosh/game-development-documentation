@@ -4,7 +4,7 @@ Welcome to our game development documentation repository! This repository serves
 
 ## Live Page
 
-To view the page live, visit: [https://jonyoshioka.github.io/game-development-documentation/](https://jonyoshioka.github.io/game-development-documentation/)
+To view the page live, visit: [https://www.gamedevdocs.org](https://www.gamedevdocs.org)
 
 ## 🚀 Getting Started
 
