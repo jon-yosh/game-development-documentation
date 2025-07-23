@@ -7,8 +7,10 @@
 - Makes code reviews cleaner
 
 ## Rebase Branch
+> ⚠️ Warning: If you already pushed your branch to origin, delete the origin branch or do not rebase, otherwise you will have divergent branches.
 
 ### Using Command Line
+
 1. First commit or stash any changes otherwise you will get an error.
 ```
 error: cannot rebase: You have unstaged changes.
@@ -22,7 +24,11 @@ git checkout feature-branch
 
 3. Use the `rebase` command to move your branch to the branch you want to start from
 ```
-
+git rebase main
+```
+Example output:
+```
+Successfully rebased and updated refs/heads/documentation.
 ```
 
 ### Using Sourcetree
