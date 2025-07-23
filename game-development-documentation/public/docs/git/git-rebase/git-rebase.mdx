@@ -1,7 +1,28 @@
 # Git Rebase
+**Rebasing** takes your commits and places them on top of a different branch. It is as if you started working from that point.
+## Benefits:
+- Creates a clean, linear history
+- Makes it easier to follow the project's evolution
+- Eliminates unnecessary merge commits
+- Makes code reviews cleaner
 
 ## Rebase Branch
 
 ### Using Command Line
+1. First commit or stash any changes otherwise you will get an error.
+```
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+```
+
+2. Ensure that you are on the branch you want to rebase
+```
+git checkout feature-branch
+```
+
+3. Use the `rebase` command to move your branch to the branch you want to start from
+```
+
+```
 
 ### Using Sourcetree
