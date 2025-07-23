@@ -71,3 +71,43 @@ git tree
 This is `git tree` used on the blender repository:
 
 ![Blender git tree](./assets/blender-git-tree.png)
+
+# More Useful Tricks
+
+## `.mov` to `.gif`
+
+1. Install `ffmpeg`
+```sh
+brew install ffmpeg
+```
+
+2. Edit your shell profile
+```sh
+code ~/.zshrc
+```
+
+3. Add function to the bottom of the file
+```sh
+# .mov to gif alias
+mov2gif () {
+  if [ -z "$1" ]; then
+    echo "Usage: mov2gif <input.mov>"
+    return 1
+  fi
+
+  input="$1"
+  output="${input%.*}.gif"
+
+  ffmpeg -i "$input" -vf "fps=15,scale=720:-1:flags=lanczos" -c:v gif "$output"
+}
+```
+
+4. Reload shell config
+```sh
+source ~/.zshrc
+```
+
+5. Example of using the new function
+```sh
+mov2gif clip.mov
+```
