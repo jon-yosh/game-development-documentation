@@ -2,7 +2,7 @@
   "name": "game-development-documentation",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://jonyoshioka.github.io/game-development-documentation",
+  "homepage": "https://jon-yosh.github.io/game-development-documentation",
   "type": "module",
   "scripts": {
     "dev": "vite",
