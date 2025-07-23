@@ -10,8 +10,13 @@ export default function MarkdownPage() {
 
     useEffect(() => {
         const base = import.meta.env.BASE_URL;
-        const path = location.pathname === '/' ? `${base}/README.md` : `${base}${location.pathname}.mdx`;
 
+        const normalizedPath = location.pathname.endsWith('/')
+            ? `${location.pathname}README.md`
+            : `${location.pathname}.mdx`;
+    
+        const path = `${base}${normalizedPath}`.replace(/\/{2,}/g, '/');
+    
         fetch(path)
             .then(res => {
                 if (!res.ok) throw new Error('Not found');
