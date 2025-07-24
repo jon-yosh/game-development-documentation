@@ -33,12 +33,28 @@ export const docs = {
             id: "blender/shading/shading"
         },
         {
+            title: "Rendering",
+            id: "blender/rendering/rendering"
+        },
+        {
+            title: "Outliner",
+            id: "blender/outliner/outliner"
+        },
+        {
+            title: "Inserting Background Images",
+            id: "blender/inserting-background-images/inserting-background-images"
+        },
+        {
             title: "Randomize Tool",
             id: "blender/randomize-tool/randomize-tool"
         },
         {
             title: "Recalculate Normals",
             id: "blender/recalculate-normals/recalculate-normals"
+        },
+        {
+            title: "Export Models",
+            id: "blender/export-models/export-models"
         },
     ],
     godot: [
@@ -51,12 +67,20 @@ export const docs = {
             id: "godot/input-mapping/input-mapping"
         },
         {
+            title: "Input Events",
+            id: "godot/input-events/input-events"
+        },
+        {
             title: "Blocking Out the Level",
             id: "godot/block-out-level/block-out-level"
         },
         {
             title: "Collision Shape 3D",
             id: "godot/collision-shape-3d/collision-shape-3d"
+        },
+        {
+            title: "Physics Body Types",
+            id: "godot/physics-body-types/physics-body-types"
         },
         {
             title: "Reusing Node Properties",

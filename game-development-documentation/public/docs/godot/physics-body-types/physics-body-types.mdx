@@ -1,0 +1,114 @@
+# Physics Body Types
+
+## Quick Selection Guide
+
+| Need | Body Type |
+|------|-----------|
+| Player control | **CharacterBody** |
+| Physics simulation | **RigidBody** |
+| Static environment | **StaticBody** |
+| Scripted movement | **AnimatableBody** |
+
+----
+
+## RigidBody2D/3D
+**Physics-simulated bodies**
+
+- **Movement**: Forces, impulses, gravity
+- **Collision Response**: Automatic physics reactions
+- **Use Cases**: Projectiles, falling debris, physics puzzles, bouncing balls
+- **Performance**: Most expensive
+- **Key Methods**: `apply_force()`, `apply_impulse()`, `set_gravity_scale()`
+
+```gdscript
+# Example: Apply upward force
+rigid_body.apply_force(Vector2(0, -500))
+```
+
+---
+
+## CharacterBody2D/3D
+**Player/AI controlled bodies**
+
+- **Movement**: `move_and_slide()` method
+- **Collision Response**: Manual handling via code
+- **Use Cases**: Player characters, NPCs, platformer movement
+- **Performance**: Moderate
+- **Key Methods**: `move_and_slide()`, `is_on_floor()`, `is_on_wall()`
+
+```gdscript
+# Example: Basic movement
+velocity.x = input_direction * speed
+move_and_slide()
+```
+
+---
+
+## StaticBody2D/3D
+**Immovable collision surfaces**
+
+- **Movement**: None (position changes not recommended)
+- **Collision Response**: Provides collision surface only
+- **Use Cases**: Walls, floors, permanent obstacles
+- **Performance**: Most efficient
+- **Key Methods**: Mainly collision shape configuration
+
+```gdscript
+# Static bodies are typically configured in editor
+# Runtime position changes should be avoided
+```
+
+---
+
+## AnimatableBody2D/3D
+**Kinematic moving bodies**
+
+- **Movement**: Direct position/rotation control
+- **Collision Response**: Pushes other bodies, unaffected by physics
+- **Use Cases**: Moving platforms, elevators, doors, conveyor belts
+- **Performance**: Efficient
+- **Key Methods**: Direct transform manipulation, `move_and_collide()`
+
+```gdscript
+# Example: Moving platform
+position.x += sin(time) * platform_speed
+```
+
+---
+
+## Common Patterns
+
+### Platform Game Character
+```gdscript
+extends CharacterBody2D
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+func _physics_process(delta):
+    if not is_on_floor():
+        velocity.y += gravity * delta
+    
+    if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+        velocity.y = JUMP_VELOCITY
+    
+    var direction = Input.get_axis("ui_left", "ui_right")
+    velocity.x = direction * SPEED
+    
+    move_and_slide()
+```
+
+### Physics Object
+```gdscript
+extends RigidBody2D
+
+func _ready():
+    apply_impulse(Vector2(100, -200))  # Initial push
+```
+
+### Moving Platform
+```gdscript
+extends AnimatableBody2D
+
+func _physics_process(delta):
+    position.x = start_x + sin(Time.get_time_from_start()) * distance
+```
