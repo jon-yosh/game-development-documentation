@@ -1,0 +1,76 @@
+# Input Events
+
+## Basic Input Handling
+
+```gdscript
+func _input(event: InputEvent) -> void:
+    print(event is InputEventMouseMotion)
+    print(event is InputEventMouseButton)
+    print(event.is_action("jump"))
+```
+
+## Event Types
+
+**Mouse Events:**
+```gdscript
+if event is InputEventMouseButton:
+    print("Button:", event.button_index, "Pressed:", event.pressed)
+    
+if event is InputEventMouseMotion:
+    print("Position:", event.position, "Velocity:", event.velocity)
+```
+
+**Keyboard Events:**
+```gdscript
+if event is InputEventKey:
+    print("Key:", event.keycode, "Pressed:", event.pressed)
+```
+
+**Gamepad Events:**
+```gdscript
+if event is InputEventJoypadButton:
+    print("Button:", event.button_index, "Pressed:", event.pressed)
+    
+if event is InputEventJoypadMotion:
+    print("Axis:", event.axis, "Value:", event.axis_value)
+```
+
+## Input Actions
+
+```gdscript
+func _input(event: InputEvent) -> void:
+    if event.is_action("jump"):
+        print("Jump action detected")
+    
+    if event.is_action_pressed("jump"):
+        print("Jump pressed")
+    
+    if event.is_action_released("jump"):
+        print("Jump released")
+```
+
+## Common Patterns
+
+```gdscript
+func _input(event: InputEvent) -> void:
+    # Movement
+    if event.is_action_pressed("move_left"):
+        velocity.x = -speed
+    elif event.is_action_released("move_left"):
+        velocity.x = 0
+    
+    # One-time actions
+    if event.is_action_pressed("jump") and is_on_floor():
+        velocity.y = jump_strength
+    
+    # Mouse clicks
+    if event is InputEventMouseButton and event.pressed:
+        if event.button_index == MOUSE_BUTTON_LEFT:
+            handle_click(event.position)
+```
+
+## Key Functions
+
+- `_input(event)` - Handles all input events
+- `_unhandled_input(event)` - Only handles events not consumed by UI
+- `get_viewport().set_input_as_handled()` - Prevents further event processing

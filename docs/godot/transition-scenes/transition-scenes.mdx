@@ -11,3 +11,38 @@ The **SceneTree** is the core that handles:
 - Global game state - Pausing, quitting, notifications
 
 ## Example Setup
+
+1. The landing platform exports a filepath
+```
+extends CSGBox3D
+
+@export_file("*.tscn") var file_path
+```
+- The filepath appears on the **Inspector**
+![](./assets/file-path.png)
+
+- Because we declared that we only want files with the scene extension `("*.tscn")` we only get_groups scenes
+![](./assets/available-scenes.png)
+
+2. On our player script we have a function that uses the `_on_body_entered` signal to detect if we should move on to the next level
+
+```
+func _on_body_entered(body: Node) -> void:
+    ...
+		if "Goal" in body.get_groups():
+			complete_level(body.file_path)
+    ...
+```
+
+- Corresponding signal:
+![](./assets/on-body-entered-signal.png)
+
+3. The final call uses a `tween` to add time and finally calls the `get_tree().change_scene_to_file.bind()` function to change scenes
+
+```
+func complete_level(next_level_file) -> void:
+	...
+	var tween = create_tween()
+	tween.tween_interval(1.5)
+	tween.tween_callback(get_tree().change_scene_to_file.bind(next_level_file))
+```
