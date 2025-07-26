@@ -103,8 +103,32 @@ export const docs = {
             id: "godot/godot-lighting/godot-lighting"
         },
         {
+            title: "Godot Animation",
+            id: "godot/godot-animation/godot-animation"
+        },
+        {
+            title: "Code Annotations",
+            id: "godot/code-annotations/code-annotations"
+        },
+        {
+            title: "Snapping",
+            id: "godot/snapping/snapping"
+        },
+        {
             title: "Path3D",
             id: "godot/path3d/path3d"
+        },
+        {
+            title: "Navigation",
+            id: "godot/navigation/navigation"
+        },
+        {
+            title: "Creating Enemies",
+            id: "godot/creating-enemies/creating-enemies"
+        },
+        {
+            title: "Inheritance With Scenes",
+            id: "godot/inheritance-with-scenes/inheritance-with-scenes"
         },
         {
             title: "Export Godot Build",
