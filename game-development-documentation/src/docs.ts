@@ -17,6 +17,10 @@ export const docs = {
             id: "blender/blender-modifiers/blender-modifiers"
         },
         {
+            title: "UV Unwrapping",
+            id: "blender/uv-unwrapping/uv-unwrapping"
+        },
+        {
             title: "Edit Mode",
             id: "blender/edit-mode/edit-mode"
         },
@@ -107,6 +111,14 @@ export const docs = {
             id: "godot/godot-animation/godot-animation"
         },
         {
+            title: "Godot Particles",
+            id: "godot/godot-particles/godot-particles"
+        },
+        {
+            title: "Godot Shaders",
+            id: "godot/godot-shaders/godot-shaders"
+        },
+        {
             title: "Code Annotations",
             id: "godot/code-annotations/code-annotations"
         },
@@ -119,12 +131,36 @@ export const docs = {
             id: "godot/path3d/path3d"
         },
         {
+            title: "Node3D",
+            id: "godot/node-3d/node-3d"
+        },
+        {
+            title: "Remote Transform3D",
+            id: "godot/remote-transform-3d/remote-transform-3d"
+        },
+        {
             title: "Navigation",
             id: "godot/navigation/navigation"
         },
         {
+            title: "Raycasts",
+            id: "godot/raycasts/raycasts"
+        },
+        {
+            title: "Subviewport",
+            id: "godot/subviewport/subviewport"
+        },
+        {
             title: "Creating Enemies",
             id: "godot/creating-enemies/creating-enemies"
+        },
+        {
+            title: "Damage Overlay",
+            id: "godot/damage-overlay/damage-overlay"
+        },
+        {
+            title: "Game Over Menu",
+            id: "godot/game-over-menu/game-over-menu"
         },
         {
             title: "Inheritance With Scenes",
@@ -177,16 +213,48 @@ export const docs = {
     ],
     procreate: [
         {
+            title: "Procreate Gestures",
+            id: "procreate/procreate-gestures/procreate-gestures"
+        },
+        {
+            title: "Concept Art Process",
+            id: "procreate/concept-art-process/concept-art-process"
+        },
+        {
             title: "Drawing Grid Guide",
             id: "procreate/drawing-grid/drawing-grid"
+        },
+        {
+            title: "Thumbnail Sketches",
+            id: "procreate/thumbnail-sketches/thumbnail-sketches"
+        },
+        {
+            title: "Perspective Lines",
+            id: "procreate/perspective-lines/perspective-lines"
         },
         {
             title: "Creating a Grid Pattern",
             id: "procreate/grid-pattern/grid-pattern"
         },
         {
-            title: "Layer settings",
-            id: "procreate/layer-settings/layer-settings"
+            title: "Layer Opacity",
+            id: "procreate/layer-opacity/layer-opacity"
+        },
+        {
+            title: "Copy and Paste",
+            id: "procreate/copy-and-paste/copy-and-paste"
+        },
+        {
+            title: "Create Shapes",
+            id: "procreate/create-shapes/create-shapes"
+        },
+        {
+            title: "Grayscale Drawing",
+            id: "procreate/grayscale-drawing/grayscale-drawing"
+        },
+        {
+            title: "Add Color to Grayscale",
+            id: "procreate/add-color-to-grayscale/add-color-to-grayscale"
         },
     ],
     inkscape: [

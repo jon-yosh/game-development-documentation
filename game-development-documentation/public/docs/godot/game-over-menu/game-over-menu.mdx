@@ -1,0 +1,89 @@
+# Game Over Menu
+
+## Create Game Over Screen
+1. Create a **User Interface** Node
+![](./assets/new-scene-with-ui.png)
+
+2. Under the **Theme** tab select **New Theme**
+![](./assets/create-a-new-theme.png)
+
+3. Under the **Default Font** you can add a new font
+![](./assets/add-new-font.png)
+> Aside: You can download free open-source fonts at [Google Fonts](https://fonts.google.com/)
+
+4. Create a new **Center Container** to hold all of our UI components
+![](./assets/new-center-container.png)
+
+5. Create a **VBoxContainer** and set the minimum with under **Custom Minimum Size**
+![](./assets/vbox-and-min-width.png)
+
+6. Create a **Label** and **Buttons** to go inside of the **VBoxContainer**
+![](./assets/buttons-and-label.png)
+
+7. Under **Label Settings** you can override default sizes and add your own
+![](./assets/override-label-settings.png)
+
+8. Create a script so we can connect the button presses
+![](./assets/create-script.png)
+
+9. Click your button and under **Node > Signals > pressed()** select **Connect...**
+![](./assets/add-pressed-signal.png)
+
+10. Select where your script is located and connect it
+![](./assets/connect-signal-to-method.png)
+
+11. Your script will now be created as a function
+![](./assets/created-function.png)
+
+12. Example script
+```
+func game_over() -> void:
+	visible = true
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+func _on_restart_button_pressed() -> void:
+	get_tree().reload_current_scene()
+
+func _on_quit_button_pressed() -> void:
+	get_tree().quit()
+```
+
+13. We can **Instantiate Child Scene...** and add our Game Over scene
+![](./assets/instantiate-child-scene.png)
+
+14. We should hide the game over scene so it only becomes visible when we lose
+![](./assets/hide-game-over-scene.png)
+
+15. Add the game over call in the main script
+```
+@onready var game_over_menu: Control = $GameOverMenu
+
+var hitpoints: int = max_hitpoints:
+	set(value):
+		if value < hitpoints:
+			damage_animation_player.stop(false)
+			damage_animation_player.play("TakeDamage")
+		hitpoints = value
+		print(hitpoints)
+		if hitpoints <= 0:
+			game_over_menu.game_over()
+```
+
+## Pause Game 
+![](./assets/pause-mode-info.png)
+We can objects what to do while the game is paused
+
+1. Example `get_tree().paused` calls
+```
+func game_over() -> void:
+	get_tree().paused = true
+	visible = true
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+func _on_restart_button_pressed() -> void:
+	get_tree().paused = false
+	get_tree().reload_current_scene()
+```
+
+2. Change the **Process > Mode** to **Always** so that scripts and such always run, even if the game is paused
+![](./assets/change-process-type.png)

@@ -1,0 +1,60 @@
+# Subviewport
+
+![](./assets/subviewport-image.png)
+
+## Creating a Subviewport
+1. Add a **SubViewportContainer**
+![](./assets/add-subviewport.png)
+
+2. Select **Full Rect** for **Anchor Preset**
+![](./assets/make-subviewport-fullscreen.png)
+
+3. Add **SubViewport** to the **SubViewportContainer**
+![](./assets/add-subviewport-child.png)
+
+### Example Implementation for FPS
+1. Add a **Camera3D** under the **SubViewport**
+![](./assets/add-camera.png)
+
+2. Select **Stretch** under **SubViewportContainer** to make it take up the full screen
+![](./assets/stretch-to-fit.png)
+
+3. In **SubViewport** select **Transparent3D** to create the weapon overlay effect
+![](./assets/make-subviewport-transparent.png)
+
+4. When we go to the level scene we still can see all the objects, just not the sky. We will need to update the **Cull Mask**
+![](./assets/we-see-obstacles.png)
+
+5. Go the **Camera3D** in the **SubViewport** and update the culling mask so its just on **2**
+![](./assets/update-cull-mask.png)
+
+6. For your weapon, check **Editable Children** so we can update the mask on the children
+![](./assets/for-smg-edit-children.png)
+
+7. For all the children of the weapon scene add **2** to the **Cull Mask**
+![](./assets/update-mesh-cull-type.png)
+
+8. The result in the level should show the weapon and nothing else
+![](./assets/final-result.png)
+
+9. If you play the game there will be an issue with 2 weapons appearing. To fix this please refer to the **Remote Transform3D Documentation**
+![](./assets/game-issue.png)
+
+## Updating Subviewport FOV
+1. Update the FOV in the **WeaponCamera**
+![](./assets/update-fov.png)
+
+2. Make the weapon more visible go to the weapon scene and move the Weapon Mesh's Transform
+![](./assets/update-weapon-transform.png)
+
+3. Check that the weapon looks good in the Subviewport
+![](./assets/fps-viewport-looks-better.png)
+
+4. This causes an issue because the weapons are drawn twice 
+![](./assets/error-with-duplicate-guns.png)
+
+5. Update the **Cull Mask** for each part of the weapon to just **2**
+![](./assets/remove-cull-mask.png)
+
+6. Remove **Cull Mask: 2** from the main camera to prevent drawing it twice
+![](./assets/update-cull-on-original-camera.png)
