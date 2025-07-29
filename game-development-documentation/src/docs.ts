@@ -217,6 +217,10 @@ export const docs = {
             id: "procreate/procreate-gestures/procreate-gestures"
         },
         {
+            title: "Procreate Brushes",
+            id: "procreate/procreate-brushes/procreate-brushes"
+        },
+        {
             title: "Concept Art Process",
             id: "procreate/concept-art-process/concept-art-process"
         },
