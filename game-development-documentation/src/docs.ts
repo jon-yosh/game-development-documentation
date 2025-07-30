@@ -155,6 +155,10 @@ export const docs = {
             id: "godot/creating-enemies/creating-enemies"
         },
         {
+            title: "Creating a UI",
+            id: "godot/creating-a-ui/creating-a-ui"
+        },
+        {
             title: "Damage Overlay",
             id: "godot/damage-overlay/damage-overlay"
         },
