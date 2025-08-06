@@ -5,16 +5,20 @@ export const docs = {
             id: "blender/blender-shortcuts/blender-shortcuts"
         },
         {
+            title: "Blender Modifiers",
+            id: "blender/blender-modifiers/blender-modifiers"
+        },
+        {
+            title: "Blender Creation Steps",
+            id: "blender/blender-creation-steps/blender-creation-steps"
+        },
+        {
             title: "Emulate Numpad and Middle Mouse Button",
             id: "blender/emulate-numpad-and-mmb/emulate-numpad-and-mmb"
         },
         {
             title: "Pie Menus",
             id: "blender/blender-pie-menus/blender-pie-menus"
-        },
-        {
-            title: "Blender Modifiers",
-            id: "blender/blender-modifiers/blender-modifiers"
         },
         {
             title: "UV Unwrapping",
@@ -57,6 +61,10 @@ export const docs = {
             id: "blender/recalculate-normals/recalculate-normals"
         },
         {
+            title: "Auto Mirror Add-on",
+            id: "blender/auto-mirror-add-on/auto-mirror-add-on"
+        },
+        {
             title: "Export Models",
             id: "blender/export-models/export-models"
         },
@@ -65,6 +73,14 @@ export const docs = {
         {
             title: "Godot Shortcuts",
             id: "godot/godot-shortcuts/godot-shortcuts"
+        },
+        {
+            title: "Game Development Steps",
+            id: "godot/game-dev-steps/game-dev-steps"
+        },
+        {
+            title: "Game Design Document Template",
+            id: "godot/game-design-document-template/game-design-document-template"
         },
         {
             title: "Custom Input Mapping",

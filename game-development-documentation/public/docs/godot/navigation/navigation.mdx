@@ -11,11 +11,23 @@ Navigation structure in Godot
 2. Create a **New NavigationMesh**
 ![](./assets/navigation-mesh.png)
 
-3. Make the map children of the **NavigationRegion3D** so we can use it as the NavigationMesh
+3. Make the map children of the **NavigationRegion3D** so we can use it as the **NavigationMesh**
 ![](./assets/make-mesh-children.png)
 
 4. **Bake NavigationMesh**
 ![](./assets/bake-navigation-mesh.png)
+
+### Bake Navigation Mesh Settings
+1. One of the reasons you may want to adjust the **NavigationMesh** Settings is because of generation issues
+![](./assets/navigation-mesh-bug.png)
+
+2. Go into your **NavigationMesh** and update the **Radius** so that the mesh becomes thinner
+![](./assets/adjust-agent-size.png)
+> Result:
+> ![](./assets/smaller-radius-agents.png)
+
+3. If there are issues with a ledge you can adjust that too by enabling **Edge Span**
+![](./assets/enable-edge-span.png)
 
 ### Create Navigation Agent
 1. Create **NavigationAgent3D** in the agent node

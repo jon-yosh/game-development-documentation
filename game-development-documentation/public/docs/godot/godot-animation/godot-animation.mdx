@@ -3,7 +3,7 @@
 ## Animation Player
 ![](./assets/animation-player.png)
 
-### Example Usage of AnimationPlayer
+### Example Usage of the AnimationPlayer
 1. Add the **AnimationPlayer** to the node
 ![](./assets/add-animation-to-node.png)
 
@@ -68,3 +68,50 @@ func attack() -> void:
 
 ## Animation Tree
 ![](./assets/animation-tree.png)
+
+What is an **AnimationTree**
+![](./assets/what-is-an-animation-tree.png)
+
+### Example Usage of the AnimationTree
+1. First add an **AnimationTree** to our scene
+![](./assets/add-animation-tree-to-scene.png)
+
+2. For the **Tree Root** create a **New AnimationNodeStateMachine**
+![](./assets/create-animation-state-machine.png)
+
+3. Add the **AnimationPlayer** to **AnimationTree**
+![](./assets/add-animation-player-to-animation-tree.png)
+> This tells the **AnimationTree** which animations we will be controlling (i.e. Attack and Idle, which are in AnimationPlayer)
+
+4. Set **Active** to true
+![](./assets/animation-mixer-active.png)
+> When **AnimationTree** is set to **Active** we are unable to play **AnimationPlayer** in the Viewport, because the **AnimationTree** is overwriting what the **AnimationPlayer** is doing
+
+5. **Expand Bottom Panel** to make the **AnimationTree** larger
+![](./assets/expand-bottom-panel.png)
+
+6. Here is an example setup of a simple **AnimationTree**
+![](./assets/example-animation-tree-setup.gif)
+
+7. Create a reference to the **AnimationTree**
+```
+@onready var animation_tree: AnimationTree = $AnimationTree
+```
+
+8. Create a reference to the **Playback** property
+```
+@onready var playback: AnimationNodeStateMachinePlayback = animation_tree["parameters/playback"]
+```
+> **AnimationNodeStateMachinePlayback** is the object through which we can tell our **AnimationTree** to swap from Idle to Attack animations
+
+9. To find the Playback property path go to **AnimationTree > Playback > Copy Property Path**
+![](./assets/playback-property-path.png)
+
+10. To change the animation use the **travel()** method in **AnimationNodeStateMachinePlayback**
+```
+...
+if provoked:
+    if distance <= attack_range:
+        playback.travel("Attack")
+...
+```
