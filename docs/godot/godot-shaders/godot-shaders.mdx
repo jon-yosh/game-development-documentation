@@ -1,0 +1,65 @@
+# Godot Shaders
+
+![](./assets/shaders-info.png)
+## Visual Shader Language
+### Create a 2D Shader
+
+1. First create a **TextureRect**
+![](./assets/create-texture-rect.png)
+
+2. Create a **New PlaceholderTexture2D**
+![](./assets/add-placeholder.png)
+
+3. Create a new **New ShaderMaterial** under **CanvasItem > Material**
+![](./assets/create-a-new-shader-texture.png)
+
+4. Make a **New Shader...**
+![](./assets/make-shader.png)
+
+5. Under the settings you can adjust the language to **Visual Language**
+![](./assets/create-visual-shader.png)
+
+6. There are various **Modes** that can be edited. **Canvas Item** is a 2d shader
+![](./assets/shader-mode-options.png)
+
+7. Click on the shader and the shader editor will open
+![](./assets/shader-editor.png)
+
+8. **Right-click** to open the Node Picker
+![](./assets/node-picker.png)
+
+9. Example of a blurred background 
+![](./assets/example-blurred-background-shader.png)
+
+### Create a 3D Shader
+1. First select the mesh you want to add a shader to, then in **Material** add a **New ShaderMaterial**
+![](./assets/add-new-shader-to-mesh.png)
+
+2. In the **Material** section select **Shader** and create a **New Shader...**
+![](./assets/material-edit-3d-shader.png)
+
+3. Create the new Shader. **Spatial** is for 3D Shaders
+![](./assets/create-3d-shader.png)
+
+4. Click on the shader to open up the **Shader Editor**
+![](./assets/open-shading-editor.png)
+
+5. Nodes for **Spatial Shader**
+![](./assets/spatial-shader.png)
+
+6. **Fresnel Shader** example for a blue aura effect
+![](./assets/3d-shader-example.png)
+
+#### Example 3D Shaders:
+
+1. Lava Shaders
+![](./assets/lava-shaders.png)
+
+2. Enable **Local to Scene**
+![](./assets/local-to-scene.png)
+> This allows us so that when we make new lava pools we can customize the size of the mesh
+
+3. Enable **Editable Children** so that you can adjust the meshes of each independently
+![](./assets/editable-children.png)
+
+## GLSL

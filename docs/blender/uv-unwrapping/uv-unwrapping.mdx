@@ -1,0 +1,76 @@
+# UV Unwrapping
+
+## UV Map
+![](./assets/uv-map-visualization.gif)
+A **UV map** is a 2D representation of a 3D model's surface used to apply textures
+
+### Edit a UV Map
+1. Select the object then look under **Data** and under **UV Maps** you can see the UV Map of the object
+![](./assets/data-uv-maps.png)
+
+2. Select the **UV Editing** Workspace to make edits to the **UV Map**
+![](./assets/uv-editing-workspace.png)
+
+3. To view the texture you are going to add create an **Image Texture** for your object
+![](./assets/create-image-texture.png)
+
+4. In the **UV Editor Window** select **+ New** to create a new image texture and update the settings to your liking
+![](./assets/uv-editor-window-new-image.png)
+
+5. To actually view the texture go to the **Image Texture** node on the **Shader Editor** and from the dropdown select the image you just made
+![](./assets/update-image-node.png)
+
+6. From here you can see the kinds of effect the image texture has on the box
+![](./assets/move-texture-in-uv.gif)
+
+7. To add custom image textures select the **folder icon** in the **Image Texture** node and select your image
+![](./assets/add-custom-texture.png)
+
+8. To edit your image texture in the **UV Editor** select it from the dropdown menu
+![](./assets/uv-map-custom-texture.png)
+
+9. To prevent stretching of each face while editing go into **Face Select** in the **3D Viewport** and select a face. This allows you to move only that face without affecting/stretching the others
+![](./assets/adjust-faces-individually.gif)
+
+## UV Unwrap
+1. Select Mark **Seams From Islands**
+![](./assets/mark-seams-from-islands.png)
+> To unmark select **Clear Seam**
+> ![](./assets/clear-seam.png)
+
+2. The seams will be marked in red
+![](./assets/seams-appear-as-red.png)
+
+3. Delete the original UV by going into **Data** and under **UV Maps** select the **- (Minus Sign)** to delete the **UVMap**
+![](./assets/delete-uv-map.png)
+
+4. Select the object in **Object Mode** and press **Ctrl + A** to apply scale, otherwise an error may occur
+![](./assets/ctrl-a-apply-scale.png)
+
+5. Go back into **Edit Mode** and press **A** to select all faces and press **U** to unwrap and select one of the **Unwrap Methods**
+![](./assets/unwrap-options.png)
+
+6. Result of unwrapping the object
+![](./assets/uv-map-result.png)
+
+## Creating Custom Seams
+1. Open Edge Menu with **Ctrl + E** while in Edit Mode and select **Clear Seams**
+![](./assets/clear-seams.png)
+
+2. Select an edge and either **Right-Click** or **Ctrl + E** to open the menu to **Mark Seam**
+![](./assets/mark-seams.png)
+
+3. Press **U** to open the unwrap menu and unwrap the mesh with the new seams
+![](./assets/unwrap-mesh.png)
+
+## Moving Mesh After Adding Texture
+1. If you try and just move an edge the texture will stretching
+![](./assets/move-causes-distortion.gif)
+
+2. Use **G** then **G** again to initiate **Edge Slide**
+![](./assets/edge-slide.gif)
+
+3. You can then press **C** which clamps and allows you to move farther out than the original mesh
+![](./assets/edge-slide-clamp.gif)
+
+## UV Unwrapping

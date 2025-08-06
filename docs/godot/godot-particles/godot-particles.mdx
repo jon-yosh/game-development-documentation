@@ -1,0 +1,47 @@
+# Godot Particles
+![](./assets/particles-info.png)
+
+## Particles3D
+1. Add **GPUParticles3D** to your scene
+![](./assets/add-gpu-particles.png)
+
+2. A yellow bounding box appears which is the distance that the particles can be seen from
+![](./assets/yellow-bounding-box.png)
+
+3. Move the **GPUParticles3D** to where you want the particles to emerge from
+![](./assets/move-particles.png)
+
+4. Add a mesh for the particles under **Draw Passes** in **Pass 1**
+![](./assets/add-pass.png)
+
+5. Create a **New ParticleProcessMaterial** under **Process Material**
+![](./assets/add-particle-process-material.png)
+
+6. Particles will begin to emerge, make sure you resize the mesh so that you can see how the particles react
+![](./assets/resize-particles.png)
+
+### Instantiating GPUParticles3D Programmatically
+1. Export variable
+```
+@export var muzzle_flash: GPUParticles3D
+```
+
+### Particles3D Settings
+| Name | Description | Images |
+|------|-------------|--------|
+| **Time > Lifetime** | How long the particles last | ![](./assets/particle-lifetime.gif) |
+| **Time > One Shot** | Particles only emitted one time | ![](./assets/one-shot-particles.gif) |
+| **Time > Explosiveness** | How close the particles spawn apart | ![](./assets/explosiveness-particles-3d.gif) |
+| **Drawing > Local Coords** | Particles move with the spawn origin | |
+| **Drawing > Local Coords** |  | |
+
+## Particles2D
+
+# ParticleProcessMaterial Settings
+| Name | Description | Images |
+|------|-------------|--------|
+| **Accelerations > Gravity** | Gravity effect on the particles | ![](./assets/gravity-particles.gif) |
+| **Spawn > Velocity > Initial Velocity** | How quick or slow particles shoot out at spawn | ![](./assets/spawn-initial-velocity-particles.gif) |
+| **Spawn > Velocity > Direction** | Direction which particles go. Range between -1 and 1 | ![](./assets/spawn-velocity-direction-particles.gif) |
+| **Spawn > Velocity > Spread** | How wide of a cone the particles travel. Range between 0° and 180° | ![](./assets/spawn-velocity-spread-particles.gif) |
+| **Display > Scale > Scale Curve** | Create a curve that represents scale over time | ![](./assets/scale-over-time-curve-particles.gif) |

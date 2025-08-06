@@ -1,0 +1,36 @@
+# Code Annotations
+
+| Annotation | Description | Code Example |
+|------------|-------------|--------------|
+| `@tool` | Makes the script executable in the editor. Useful for editor plugins and scripts that need to run during development. | `@tool`<br>`extends EditorPlugin` |
+| `@export` | Exposes variables in the inspector for easy editing. | `@export var health: int = 100`<br>`@export var speed: float = 5.0` |
+| `@export_range` | Creates a slider with min/max values in the inspector. | `@export_range(0, 100) var health: int`<br>`@export_range(0.0, 10.0, 0.1) var speed` |
+| `@export_enum` | Creates a dropdown selection in the inspector. | `@export_enum("Easy", "Medium", "Hard") var difficulty`<br>`@export_enum("Warrior", "Mage") var class` |
+| `@export_file` | Shows a file picker in the inspector. | `@export_file var config_file: String`<br>`@export_file("*.json") var data_file` |
+| `@export_multiline` | Creates a multi-line text editor in the inspector. | `@export_multiline var description: String` |
+| `@export_group` | Groups related exported variables in the inspector. | `@export_group("Player Stats")`<br>`@export var health: int = 100`<br>`@export var mana: int = 50` |
+| `@export_category` | Creates a category separator in the inspector. | `@export_category("Core Settings")`<br>`@export var game_mode: String` |
+| `@rpc` | Marks a function as callable remotely over the network. | `@rpc`<br>`func take_damage(amount: int):`<br>`    health -= amount` |
+| `@warning_ignore` | Suppresses specific compiler warnings for the following statement or function. | `@warning_ignore("unused_variable")`<br>`func test():`<br>`    var unused = 10` |
+| `@icon` | Sets a custom icon for the script in the FileSystem dock. | `@icon("res://icons/player_script.png")`<br>`extends CharacterBody2D` |
+
+## Quick Example
+
+```gdscript
+@tool
+@icon("res://icons/player.png")
+extends CharacterBody2D
+
+@export_category("Player Stats")
+@export_range(0, 100) var health: int = 100
+@export_range(0.0, 10.0) var speed: float = 5.0
+@export_enum("Warrior", "Mage", "Archer") var class: String
+
+@export_group("Settings")
+@export_multiline var description: String
+@export_file("*.json") var config_file: String
+
+@rpc
+func take_damage(amount: int):
+    health -= amount
+```
