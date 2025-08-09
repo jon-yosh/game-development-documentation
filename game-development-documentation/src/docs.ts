@@ -8,6 +8,10 @@ export const docs = {
             title: "Blender Modifiers",
             id: "blender/blender-modifiers/blender-modifiers"
         },
+                {
+            title: "Blender Animation",
+            id: "blender/blender-animation/blender-animation"
+        },
         {
             title: "Blender Creation Steps",
             id: "blender/blender-creation-steps/blender-creation-steps"
@@ -282,7 +286,75 @@ export const docs = {
         },
     ],
     inkscape: [
+        {
+            title: "Inkscape Shortcuts",
+            id: "inkscape/inkscape-shortcuts/inkscape-shortcuts"
+        },
+        {
+            title: "Align and Distribute",
+            id: "inkscape/align-and-distribute/align-and-distribute"
+        },
+        {
+            title: "Union and Difference",
+            id: "inkscape/union-and-difference/union-and-difference"
+        },
+        {
+            title: "Stroke and Fill",
+            id: "inkscape/stroke-and-fill/stroke-and-fill"
+        },
+        {
+            title: "Shape Builder Tool",
+            id: "inkscape/shape-builder-tool/shape-builder-tool"
+        },
+        {
+            title: "Design UI Elements",
+            id: "inkscape/design-ui-elements/design-ui-elements"
+        },
+        {
+            title: "Save and Export",
+            id: "inkscape/save-and-export/save-and-export"
+        },
     ],
     gimp: [
+        {
+            title: "Gimp Shortcuts",
+            id: "gimp/gimp-shortcuts/gimp-shortcuts"
+        },
+        {
+            title: "Polish UI elements",
+            id: "gimp/polish-ui-elements/polish-ui-elements"
+        },
+    ],
+    audacity: [
+        {
+            title: "Create Sound Effects",
+            id: "audacity/create-sound-effects/create-sound-effects"
+        },
+    ],
+    ardour: [
+        {
+            title: "Ardour Shortcuts",
+            id: "ardour/ardour-shortcuts/ardour-shortcuts"
+        },
+        {
+            title: "Create a New Track",
+            id: "ardour/create-a-new-track/create-a-new-track"
+        },
+        {
+            title: "Connecting VST's",
+            id: "ardour/connecting-vsts/connecting-vsts"
+        },
+        {
+            title: "Music Making Process",
+            id: "ardour/music-making-process/music-making-process"
+        },
+        {
+            title: "Music Making Process",
+            id: "ardour/music-making-process/music-making-process"
+        },
+        {
+            title: "Exporting and Importing Tracks",
+            id: "ardour/exporting-and-importing-tracks/exporting-and-importing-tracks"
+        },
     ],
 };
