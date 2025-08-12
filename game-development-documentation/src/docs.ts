@@ -53,10 +53,6 @@ export const docs = {
             id: "blender/outliner/outliner"
         },
         {
-            title: "Inserting Background Images",
-            id: "blender/inserting-background-images/inserting-background-images"
-        },
-        {
             title: "Randomize Tool",
             id: "blender/randomize-tool/randomize-tool"
         },
@@ -67,6 +63,18 @@ export const docs = {
         {
             title: "Auto Mirror Add-on",
             id: "blender/auto-mirror-add-on/auto-mirror-add-on"
+        },
+        {
+            title: "Node Wrangler Add-on",
+            id: "blender/node-wrangler/node-wrangler"
+        },
+        {
+            title: "Inserting Background Images",
+            id: "blender/inserting-background-images/inserting-background-images"
+        },
+        {
+            title: "Add Objects from Other Blend Projects",
+            id: "blender/add-objects-from-other-blend-projects/add-objects-from-other-blend-projects"
         },
         {
             title: "Export Models",
@@ -303,6 +311,10 @@ export const docs = {
             id: "inkscape/stroke-and-fill/stroke-and-fill"
         },
         {
+            title: "Snapping",
+            id: "inkscape/snapping/snapping"
+        },
+        {
             title: "Shape Builder Tool",
             id: "inkscape/shape-builder-tool/shape-builder-tool"
         },
@@ -319,6 +331,18 @@ export const docs = {
         {
             title: "Gimp Shortcuts",
             id: "gimp/gimp-shortcuts/gimp-shortcuts"
+        },
+        {
+            title: "Tool Groups",
+            id: "gimp/tool-groups/tool-groups"
+        },
+        {
+            title: "Hide Scrollbars",
+            id: "gimp/hide-scrollbars/hide-scrollbars"
+        },
+        {
+            title: "Flatten Perspective Image",
+            id: "gimp/flatten-perspective-image/flatten-perspective-image"
         },
         {
             title: "Polish UI elements",
@@ -349,8 +373,8 @@ export const docs = {
             id: "ardour/music-making-process/music-making-process"
         },
         {
-            title: "Music Making Process",
-            id: "ardour/music-making-process/music-making-process"
+            title: "Using MIDI Tracks",
+            id: "ardour/using-midi-tracks/using-midi-tracks"
         },
         {
             title: "Exporting and Importing Tracks",
