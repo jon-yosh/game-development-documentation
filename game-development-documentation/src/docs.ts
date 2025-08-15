@@ -77,6 +77,14 @@ export const docs = {
             id: "blender/add-objects-from-other-blend-projects/add-objects-from-other-blend-projects"
         },
         {
+            title: "Animating with Bones",
+            id: "blender/animating-with-bones/animating-with-bones"
+        },
+        {
+            title: "Modelling with Subdivision Surface Modifier",
+            id: "blender/modelling-with-subdivision-surface-modifier/modelling-with-subdivision-surface-modifier"
+        },
+        {
             title: "Export Models",
             id: "blender/export-models/export-models"
         },
@@ -221,6 +229,10 @@ export const docs = {
             id: "git/git-rebase/git-rebase"
         },
         {
+            title: "Git Commit",
+            id: "git/git-commit/git-commit"
+        },
+        {
             title: "Pull Request",
             id: "git/pull-request/pull-request"
         },
@@ -321,6 +333,10 @@ export const docs = {
         {
             title: "Design UI Elements",
             id: "inkscape/design-ui-elements/design-ui-elements"
+        },
+        {
+            title: "Resize Document to Fit Content",
+            id: "inkscape/resize-document-to-fit-content/resize-document-to-fit-content"
         },
         {
             title: "Save and Export",

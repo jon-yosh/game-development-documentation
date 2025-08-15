@@ -1,0 +1,55 @@
+# Git Commit
+This workflow is for a basic usage of git, with one branch (main) and making changes directly on the branch.
+
+## CLI Version
+1. See which files were edited
+```
+git status
+```
+> With Alias
+> ```
+> git st
+> ```
+
+2. Add all the files you want to commit, or just add all
+```
+git add .
+```
+> With Alias
+> ```
+> git a
+> ```
+
+3. Create a commit with a message
+```
+git commit -m "Create commit message"
+```
+> With Alias
+> ```
+> git cm "Create commit message"
+> ```
+
+4. Push the commit to your branch, in this case main
+```
+git push origin main
+```
+> With Alias
+> ```
+> git p
+> ```
+
+## Sourcetree Version
+1. Add all the files you want to commit by adding them individually or just checking **Unstaged Files**
+![](./assets/add-commit-files.png)
+
+2. Create a message then pres **Commit**
+![](./assets/create-commit-message.png)
+
+3. Now you can push to main by right clicking main then **Push to > origin**
+![](./assets/push-to-main.png)
+
+4. Now you can just press **OK**
+![](./assets/confirm-branch-to-push.png)
+
+5. Now your **origin/main** should be where you **main** is, meaning it updated correctly
+![](./assets/completed-push.png)
