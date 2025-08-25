@@ -85,6 +85,22 @@ export const docs = {
             id: "blender/modelling-with-subdivision-surface-modifier/modelling-with-subdivision-surface-modifier"
         },
         {
+            title: "Rigging Bodies",
+            id: "blender/rigging-bodies/rigging-bodies"
+        },
+        {
+            title: "Create Walk Cycle",
+            id: "blender/create-walk-cycle/create-walk-cycle"
+        },
+        {
+            title: "Sculpt a Head",
+            id: "blender/sculpt-a-head/sculpt-a-head"
+        },
+        {
+            title: "Animated Textures",
+            id: "blender/animated-textures/animated-textures"
+        },
+        {
             title: "Export Models",
             id: "blender/export-models/export-models"
         },
@@ -287,6 +303,10 @@ export const docs = {
         {
             title: "Layer Opacity",
             id: "procreate/layer-opacity/layer-opacity"
+        },
+        {
+            title: "Quick Layer Change",
+            id: "procreate/quick-layer-change/quick-layer-change"
         },
         {
             title: "Copy and Paste",
