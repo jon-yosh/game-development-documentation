@@ -1,0 +1,108 @@
+# Rigging Bodies
+
+## Build the Armature
+1. It's easiest to start with a model in an **A-Pose**
+![](./assets/a-pose-model.png)
+
+2. Move **3D Cursor** to **World Origin** with **Shift + S** then **Shift + A** and create **Armature**. An alternative method is to create an armature then use **Alt + G** to remove movement
+![](./assets/create-armature-at-world-origin.png)
+
+3. Move the **Armature** to where the bottom of the spine would be. Make sure you enable **Data > Viewport Display > In Front** to see the bones
+![](./assets/move-armature-and-enable-in-front.png)
+
+4. Create 4 bones for the body, 1 for the neck, and 1 for the head
+![](./assets/bones-for-body-neck-head.png)
+
+5. make sure that the bones line up to the middle of the mesh
+![](./assets/move-bones-to-middle.png)
+
+6. To create a linked bone use **Shift + D** on the bone closest to the shoulder, then select the joint and press **G**
+![](./assets/create-linked-bone.gif)
+> If you made a mistake to unlink use **Alt + P** then **Clear Parent**
+> ![](./assets/clear-parent.png)
+> To reconnect you can press **Ctrl + P** then select **Keep Offset**
+> ![](./assets/reconnect-parent.png)
+
+7. When creating the arm move the bone to the elbow just to make sure that the length is good
+![](./assets/move-to-elbow.png)
+
+8. Create a bone to the wrist
+![](./assets/bone-to-wrist.png)
+
+9. Now we can move out elbow bone into position in the middle, because we know it lines up now
+![](./assets/move-elbow-bone.gif)
+
+10. In order to have a high-quality armature, we should rotate the bones so that the face forward
+![](./assets/rotate-bones.gif)
+
+11. Create a leg bone with **Shift + D** adjust the bones, then clear parent with **Alt + P** and reconnect to the bottom of the spine with **Ctrl + P**
+![](./assets/create-leg-bones.gif)
+
+## Symmetrize Bones in Armature
+1. Rename a bone with **F2**
+![](./assets/rename-with-f2.png)
+
+2. You can also rename in the **Bone Menu**
+![](./assets/rename-in-bone-menu.png)
+
+3. To enable bone names go to **Armature Data Menu** and enable **Viewport Display > Names**
+![](./assets/enable-bone-names.png)
+
+4. In order for the **Symmetrize** Bones system to work you need to follow these naming conventions
+![](./assets/symmetrize-naming-conventions.png)
+
+5. The important naming conventions are legs and arms. Example:
+- Left Leg:
+```
+thigh_l
+calf_l
+foot_l
+```
+
+- Left Arm:
+```
+upper arm_l
+lower arm_l
+hand_l
+```
+
+6. **Right-Click** on the arm bones and leg bones them select **Symmetrize**
+![](./assets/symmetrize-bones-and-arms.png)
+
+7. You should now have both sides of the armature
+![](./assets/blender-symmetrize-complete.png)
+
+## Creating IK (Inverse Kinematics)
+1. Create a `pole_l` and `target_l` bones above the knee and behind the heel. Make sure you deselect **Bone > Deform**. Clear parents for both of those bones with **Alt + P**
+![](./assets/create-ik-bones.png)
+
+2. In **Pose Mode** select the `calf_l` bone and select **Bone Constraints** and add a **Inverse Kinematics** Constraint
+![](./assets/pose-mode-add-ik.png)
+
+3. The **Target** is the armature and since we only have one just select **Armature** for **Bone** select the `target_l` bone. For **Pole Target** select the **Armature** again then select `pole_l` for the **Bone**. The whole skeleton might be angled, to which we need to change the **Chain Length** to 2, because we have two bones in the leg. We then need to change the **Pole Angle** so that our knee appears correct
+![](./assets/add-bone-constraints.gif)
+
+4. Go into **Edit Mode** then select the leg and **Right-Click** to symmetrize the IK
+![](./assets/symmetrize-ik-bones.gif)
+
+5. Parent the mesh to the **Armature** by going into **Object Mode** selecting the mesh first then the armature second. We then can parent with **Ctrl + P** and selecting **With Automatic Weights**
+![](./assets/parent-mesh-to-armature.gif)
+
+6. To parent the head go into **Pose Mode** select the head bone, then select the TV and make sure the bones are the **Active Object** now you can press **Ctrl + P** then select **Bone**
+![](./assets/parent-head-to-armature.gif)
+
+## Weight Painting
+1. To enter **Weight Paint** Mode and edit the weights for each bone first select the **Armature** in **Object Mode** then **Shift** select the **Mesh** so that both are selected. Now you can enter **Weight Paint** Mode using **Tab**. You can select a bone by **Shift + Ctrl + Click** the bone
+![](./assets/weight-paint-for-body.gif)
+> When weight painting it's based on vertives so if you experience a weird snapping feeling, it is most likely due to the fact that the mesh is low poly.
+> ![](./assets/weight-paint-mode-weird.gif)
+
+2. Paint the weights on your character, make sure that **Weight** is set to **1.000**, if you want to remove weight hold **Ctrl** and paint
+![](./assets/use-solid-weights.png)
+
+3. A useful tip is to move the arms and legs into various positions to check for any creases in the mesh. This way you can paint accordingly
+![](./assets/weight-paint-thigh.gif)
+
+4. Use **Alt + R** and **Alt + G** to reset any rotation or movement you may have done
+![](./assets/remove-rotation-and-move.gif)
+

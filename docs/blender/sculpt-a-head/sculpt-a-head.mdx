@@ -1,0 +1,189 @@
+# Sculpt a Head
+
+## Setup
+1. **Shift + A** to add a **UV Sphere**
+![](./assets/create-uv-sphere.png)
+
+2. In sculpt mode it can be helpful to enable the **X-Axis** and **Y-Axis** overlays and the **Origins**
+![](./assets/helpful-gizmos-in-sculpt.png)
+
+3. Enable symmetry on the **X-Axis** eventually we will disable to add asymmetry to the face, but this will be left on for the initial sculpt
+![](./assets/enable-x-symmetry.png)
+
+## Remeshing the Sphere
+1. In order to sculpt with finer detail we will need to add more faces to the sphere using **Remesh**
+![](./assets/remesh-menu-item.png)
+
+2. A more convenient way to remesh is to use the shortcut **R** to bring up the **Voxel Size** and use **Ctrl + R** to apply the voxel size and **Remesh**
+![](./assets/remesh-with-shortcuts.gif)
+
+
+## Sculpting
+1. To create the initial structure of the face we will want to use the **Grab Brush**
+![](./assets/grab-brush.png)
+
+2. **F** to quickly resize your brush
+![](./assets/change-brush-size.gif)
+
+3. Start with the chin my grabbing from closer to the middle rather than the bottom of the sphere
+![](./assets/start-with-chin.gif)
+
+4. When making big changes press **Ctrl + R** to **Remesh** and add more geometry
+![](./assets/remesh-after-big-changes.gif)
+
+5. It is also a good idea to smoothen the mesh with **Shift + Click**ing with any brush, which will conveniently use the **Smooth Brush**
+![](./assets/smooth-shift-modifier.gif)
+
+6. Move in the top of the head for proper proportions
+![](./assets/add-more-head-structure.gif)
+
+7. Hold **Ctrl** to **Move Along Normals** this will make the neck easier to sculpt
+![](./assets/add-neck-with-normals.gif)
+
+## Further Steps
+1. Continue sculpting the 
+![](./assets/make-neck-and-more.png)
+
+2. Create eyesockets and a mound for the mouth
+![](./assets/eyesockets-and-mound.png)
+
+3. Use the **Create Sharp** to create the mouth indentation, then use **Ctrl** with the **Crease Sharp** still in use to push the mesh outward
+![](./assets/lips-sculpt.png)
+> You can use **Shift + F** to adjust the brush strength
+> ![](./assets/adjust-brush-strength.gif)
+
+## Eyes
+1. Create an eyeball with **Shift + A** then rotate it to the correct position with **R** then **X** then type **90**
+![](./assets/add-sphere-for-eyeball.png)
+
+2. Check proportions on a normal human the eyes will be **6** across the head
+![](./assets/eye-proportions.png)
+
+3. Move the eye back to an appropriate position
+![](./assets/move-the-eye-back.png)
+
+4. Add a **Mirror Modifier** to the object and for **Mirror Object** select the head
+![](./assets/mirror-eyes.png)
+
+5. Use **Clay Strips** to add in eye lids. Make sure to use **Shift** (Smooth Brush) to smooth the eye lids. You can also use the **Grab Brush** to make minor adjustments
+![](./assets/clay-strips-for-eye-lids.png)
+
+## Ears
+1. Create a cylinder which will be the ear, as a separate object
+![](./assets/create-cylinder-ear.gif)
+
+2. **Scale** (with S) along an axis (X, Y, or Z) to get the oval effect for the ear
+![](./assets/scale-along-axis.gif)
+
+3. Click on your ear then **Shift + Click** on your head, then press **Ctrl + J** to join the two. Their meshes are not combined yet
+![](./assets/join-ear-to-head.gif)
+
+4. To combine both meshes go into **Sculpt Mode** then remesh with **Ctrl + R**. Smooth with **Shift** Modifier
+![](./assets/remesh-to-combine-ear.gif)
+
+5. Use the **Symmetrize** tool and make sure to set the correct Direction
+![](./assets/symmetrize-ear.png)
+
+6. Create the helix of the ear using the **Draw Brush**
+![](./assets/sculpt-helix.png)
+
+7. Create an ear canal using **Ctrl** which will do the inverse of the draw brush
+![](./assets/create-ear-canal.png)
+
+8. Create the tragus with the **Draw Brush**. Make sure to smooth with **Shift**
+![](./assets/create-tragus.png)
+
+9. Create a bump in the middle of the ear
+![](./assets/create-bump.png)
+
+10. Use the **Crease Brush** to sharpen the edges. Experiment with **Crease Polish** and **Crease Sharp**. Use the **Grab Brush** to adjust proportions
+![](./assets/crease-brush-ear.png)
+
+## Details
+1. When adding details we may need to remesh. If you are unsure about ranges sculpts can go to 3-4 million and even 60 million with some techniques. To see face enable **Viewport Overlays > Statistics**. 
+![](./assets/show-face-count.png)
+
+2. Add more faces with **R** for voxel size then **Ctrl + R** for **Remesh**
+![](./assets/add-more-geometry.png)
+
+3. A good brush to use for fine details is the **Crease Brush** combining it with the smooth brush **Shift**
+![](./assets/crease-brush-initial-detail.png)
+
+4. Use **Ctrl + Click** on the **Crease Brush** to inverse it's effect and add cheekbones and adjust the neck and jaw
+![](./assets/cheek-bones-crease-brush.png)
+
+5. Mid-level detail work example
+![](./assets/head-details.png)
+
+6. Because remeshing can smoothen the crease details, we will do our last remesh then finalize details (Try not to remesh again as it might smoothen)
+![](./assets/final-details-after-remesh.png)
+
+## Creating Horns
+1. If you want your character head to contain horns, earrings, or other cosmetic item the best route is to do that in a new object. Make sure to **Remesh** so the object has more geometry and **Apply Scale** with **Ctrl + A** while in **Object Mode**
+![](./assets/creating-horns.png)
+
+2. For something like horns a useful brush to use is the **Snake Hook Brush**
+![](./assets/snake-eyes.gif)
+
+3. To counteract the thinness that comes from the **Snake Hook** use the **Inflate Brush**
+![](./assets/inflate-brush.gif)
+
+4. Apply a **Mirror Modifier** to create another horn on the other side
+![](./assets/apply-mirror-to-horns.png)
+
+## Final Detail Tips
+1. Create a copy, these tips will be **destructive**
+
+2. When in **Sculpt Mode** you can press **Alt + Q** while hovering over another object to be able to change 
+![](./assets/swap-sculpt-object.gif)
+
+3. **Draw Sharp** can create a nice crevice for the horns
+![](./assets/horn-detail.png)
+
+4. You can use the **Blob Brush** to create warts. If you are making it asymmetrical make sure to disable the mirror mode
+![](./assets/blob-brush.png)
+
+## Painting in Sculpt Mode
+1. There are two ways of painting: 1. The **Paint Tool** within the **Sculpting Workspace** and the painting in the **Texture Paint Workspace**. In this case we will be using the **Paint Tool** in the **Sculpting Workplace**, because in order to **Texture Paint** we would need a low-poly mesh in order to UV Unwrap properly, our mesh is very high-poly
+![](./assets/painting-options.png)
+
+2. To apply color go to the **Tool Menu** and find **Color Picker**. There you can find and apply colors to your mesh
+![](./assets/color-picker-paint.png)
+
+3. If you go into **Material Preview** the model appears white. We need to add a texture in order to fix this
+![](./assets/model-appears-white.png)
+
+4. In the **Shader Editor** create a **New Material** connect a **Color Attribute** Node to the Color Input in the **Principled BSDF**. In the **Color Attribute** make sure the select the same color that is in **Data > Color Attributes** (This was created when you started painting)
+![](./assets/set-texture-for-model.png)
+
+5. You can now preview your color in **Material Preview** mode. Create a **Color Palette** to keep track of all the colors you used. Make sure you have the **Paint Tool** selected and you are in the **Tool** menu
+![](./assets/create-color-palette.png)
+
+## Final Touches
+1. Remember to **Shade Smooth** to get a less pixelated effect
+![](./assets/shade-smooth.gif)
+
+2. Assign different materials to each part of the eyes, for each adjust the **Roughness** value to 0 so they become more shiny. Remember to **Shade Smooth**
+![](./assets/color-eyes.gif)
+
+3. Assign a material to the horns 
+![](./assets/horn-material.gif)
+
+4. You can also add more paint around the eyes and horns
+![](./assets/more-final-touches.png)
+
+## Lighting Character
+
+1. First set the camera to position. Use **View > Camera > Active Camera** or **Numpad 0**. You can **Lock Camera to View** to move it accordingly. Set **Viewport Shading** to **Rendered**
+![](./assets/set-camera-to-position.gif)
+
+2. The simplest way to light a character is with the **3-Point Lighting System** which is a lighting technique
+
+3. First add a **Key Light** which will just be an **Area Light**
+![](./assets/create-a-key-light.png)
+
+4. Next add a **Fill Light** which will also be an **Area Light** with reduced wattage and a wider light so it is not as harsh
+![](./assets/fill-light.png)
+
+5. Finally add a **Back Light** adding blue will help pronounce the stylization of the character
+![](./assets/back-light.png)

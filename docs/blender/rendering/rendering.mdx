@@ -26,3 +26,46 @@
 
 2. Once the image is rendered make sure you save with **Image > Save as...**
 ![](./assets/save-render.png)
+
+## Render Animation
+1. Go to the **Output** section and adjust the resolution percentage (50% if you are doing a test and want to go quicker), and make sure that the **Frame Range** is correct
+![](./assets/output-properties.png)
+
+2. Update the output file path to where you want the final render to go. Then change the 
+![](./assets/output-video-type.png)
+> The PNG file format mixed with RGBA can be used to create cool visual effects you just need to make sure the **Transparent** is enabled in **Render > Film > Transparent**
+> ![](./assets/transparent-background.png)
+
+3. In this case we just want a video so change the **File Format** to **FFmpeg Video**
+![](./assets/file-format-ffmpeg.png)
+
+4. **Encoding** default might be Matroska, we can change that to a more universal type like MPEG-4
+![](./assets/change-encoding-container.png)
+
+5. **Video Quality** can be set to **Perceptually Lossless** for **Output Quality** and **Slowest** for **Encoding Speed**
+![](./assets/video-quality.png)
+
+6. To actually render go to **Render > Render Animation** 
+![](./assets/render-animation.png)
+
+7. To view your animation you can go to **Render > View Animation**
+![](./assets/view-animation.png)
+
+8. The animation will then player on the Blender player
+![](./assets/animation-output-example.gif)
+
+## EEVEE vs. Cycles
+1. To change the **Render Engine** select **Render** on the side then you can change the **Render Engine**
+![](./assets/render-engine.png)
+
+2. EEVEE is quick and is good if you are prototyping before the final image
+![](./assets/eevee-is-quick.png)
+
+3. If you want to render nice looking images with more realistic lighting use **Cycles**
+![](./assets/cycles-result.png)
+
+4. Enable denoising for less staticy images
+![](./assets/enable-denoising.png)
+
+5. It can also help to set a time-limit on how long each image takes to render
+![](./assets/time-limit-render.png)

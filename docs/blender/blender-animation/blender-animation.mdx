@@ -1,0 +1,60 @@
+# Blender Animation
+
+## Animation Prep
+
+1. You may want to put separate objects as children to an **Empty**
+![](./assets/shift-a-add-plain-axis.png)
+
+2. Rename the **Empty** to something that makes sense, like a controller
+![](./assets/rename-empty.png)
+
+3. Select all the objects you want to include and make sure that the **Empty** is the **Active Object** by **Ctrl+Clicking** it
+![](./assets/set-empty-as-active-object-ctrl-click.png)
+
+4. Now select **Object > Parent > Object**
+![](./assets/parent-to-object.png)
+
+5. You can do this for multiple parents nested inside, this will allow for animation to be easier
+![](./assets/multiple-parents.gif)
+
+## Animation
+1. Select the **Animation** Workspace
+![](./assets/select-animation-workspace.png)
+
+2. Update your **Frame Rate** to desired amount
+![](./assets/set-framerate.png)
+
+3. Set **Playhead** to starting position
+![](./assets/reset-playhead.png)
+
+4. Press **I** in the **3D Viewport** to add keyframes
+![](./assets/add-keyframes.png)
+> Note: You can also just enable the **Record** Button which will create keyframes whenever you move an object. Watch out for accidentally creating keyframes when you do not want to
+> ![](./assets/record-button.png)
+> If you want more specified properties, press **K** to bring up the **Keyframe Menu**
+> ![](./assets/keyframe-menu.png)
+
+5. Add a second keyframe
+![](./assets/add-second-keyframe.png)
+
+6. Make the **End** match with when you want the animation to terminate
+![](./assets/shorten-animation.png)
+
+## Graph Editor
+1. Open the **Graph Editor**
+![](./assets/open-graph-editor.png)
+
+2. We can edit in the **Graph Editor** just like with the **Dopesheet**
+![](./assets/ball-animation-with-graph.gif)
+
+3. You can edit **Interpolation Modes** by going into **Key > Interpolation Mode**
+![](./assets/interpolation-mode-menu.png)
+
+4. Test out the interpolation modes to help the type of animation you are trying to accomplish
+![](./assets/interpolation-modes.gif)
+
+5. To reduce the length you can scale based on the playhead. First update the pivot point
+![](./assets/update-animation-pivot-point.png)
+
+6. Now you can scale based on the playhead, so put the playhead at 0 then press **S** to scale then **X** along the x-axis
+![](./assets/shorten-animation.gif)

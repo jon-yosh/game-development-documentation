@@ -1,0 +1,62 @@
+# Modelling With Subdivision Surface Modifier
+
+To easily create a **Subdivision Surface Modifier** you can you 
+
+| Shortcut | Image |
+|----------|-------|
+| **CMD + 1** | ![](./assets/level-1-subdivision.png) |
+| **CMD + 2** | ![](./assets/level-2-subdivision.png) |
+| **CMD + 3** | ![](./assets/level-3-subdivision.png) |
+
+It is a good idea to set the **Render** as higher than the **Viewport**, so that it is easier to model and having a smoother render
+![](./assets/render-higher-than-viewport.png)
+
+## Example of Modelling Workflow
+1. Add a subdivision surface modifier with the method above
+
+2. Add a mirror using **AutoMirror**
+![](./assets/auto-mirror.png)
+
+3. Add loop cuts **Ctrl + R** to add more form to your model. You can edge slide with **GG**
+![](./assets/add-cuts-for-form.png)
+
+4. You can also use **E** to extrude, and you can develop a TV looking model
+![](./assets/tv-model.png)
+
+5. You can separate the screen to make it easier to model by pressing **P** then **Selection**
+![](./assets/p-to-separate.png)
+
+6. You may notice that there is a weird visual issue. This is due to the **Modifier Stack**
+![](./assets/modifier-stack-issue.png)
+
+7. To fix: reorder the modifiers so that the **Mirror Modifier** is first then the **Subdivision Surface Modifier**
+![](./assets/fix-modifier-stack.gif)
+
+8. You can select both parts and **Shade Smooth** 
+![](./assets/shade-smooth-tv.png)
+
+9. You can add a **Subsurface Modifier** to the cylinder, but it has anomalies
+![](./assets/subsurface-modifier.png)
+
+10. To fix anomalies inset with **I** twice, and it is a good idea to **Shade Smooth** again
+![](./assets/inset-to-fix.png)
+
+## Create a Body
+1. Create a block person using a cube, with a mirror modifier then extruding to create limbs
+![](./assets/block-person.png)
+
+2. Add a **Subdivision Surface Modifier**
+![](./assets/subdivision-surface-modifier.png)
+
+3. Make sure you **Shade Smooth**
+![](./assets/shade-tv-man-smooth.png)
+
+### Preparing Body for Rig
+1. To allow for proper bending in the joints use **Ctrl + B** to Bevel and add more topology
+![](./assets/bevel-joints.png)
+
+2. You can set the **3D Cursor** near the arm and change the pivot point to the **3D Cursor** to move the arm downward
+![](./assets/rotate-at-3d-cursor.png)
+
+3. Fix any pinching around the shoulder, and move the elbow out to make it easier to tell where it is. Now our model is in an **A-Pose** so it will make it easier to rig
+![](./assets/a-pose-tv-man.png)
