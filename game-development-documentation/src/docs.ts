@@ -401,6 +401,10 @@ export const docs = {
             id: "ardour/create-a-new-track/create-a-new-track"
         },
         {
+            title: "Editor List",
+            id: "ardour/editor-list/editor-list"
+        },
+        {
             title: "Connecting VST's",
             id: "ardour/connecting-vsts/connecting-vsts"
         },
@@ -411,6 +415,10 @@ export const docs = {
         {
             title: "Using MIDI Tracks",
             id: "ardour/using-midi-tracks/using-midi-tracks"
+        },
+        {
+            title: "MIDI Channels",
+            id: "ardour/midi-channels/midi-channels"
         },
         {
             title: "Exporting and Importing Tracks",
