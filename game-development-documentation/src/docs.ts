@@ -269,6 +269,10 @@ export const docs = {
         {
             title: "Create React Project with Vite",
             id: "react/create-react-project-with-vite/create-react-project-with-vite"
+        },
+        {
+            title: "Reduce HDRI File Size",
+            id: "react/reduce-hdri-file-size/reduce-hdri-file-size"
         }
     ],
     procreate: [
@@ -379,6 +383,10 @@ export const docs = {
         {
             title: "Flatten Perspective Image",
             id: "gimp/flatten-perspective-image/flatten-perspective-image"
+        },
+        {
+            title: "Reduce Resolution of Image",
+            id: "gimp/reduce-resolution-of-image/reduce-resolution-of-image"
         },
         {
             title: "Polish UI elements",
