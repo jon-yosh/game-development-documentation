@@ -1,0 +1,12 @@
+# Reduce HDRI File Size
+If hosting 3D Models with HDRI environment backgrounds they can make React slow. The best solution is to reduce the file size
+
+1. Install **ImageMagick** macOS installation:
+```
+brew install imagemagick
+```
+
+2. Convert HDRI environment background to a smaller file format:
+```
+magick input.exr -depth 8 output.hdr
+```
