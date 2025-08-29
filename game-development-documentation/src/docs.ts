@@ -363,6 +363,10 @@ export const docs = {
             id: "inkscape/resize-document-to-fit-content/resize-document-to-fit-content"
         },
         {
+            title: "Use New Fonts",
+            id: "inkscape/use-new-fonts/use-new-fonts"
+        },
+        {
             title: "Save and Export",
             id: "inkscape/save-and-export/save-and-export"
         },
