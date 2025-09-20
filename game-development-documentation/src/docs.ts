@@ -127,7 +127,7 @@ export const docs = {
             id: "godot/input-events/input-events"
         },
         {
-            title: "Blocking Out the Level",
+            title: "Blocking Out the Level and Export Assets to Blender",
             id: "godot/block-out-level/block-out-level"
         },
         {
