@@ -65,3 +65,19 @@ You can create a CSG (Constructive Solid Geometry) Node, e.g. **CSGBox3D**, to h
 ![](./assets/level-will-appear.png)
 > If you see the back of the faces you want to enable **Backface Culling** so you can see inside the mesh
 > ![](./assets/enable-backface-culling.png)
+
+## Lines from Empty Parent
+1. When you import a `.gltf` from Godot, in Blender you will see lines that are the relationship from the **Empty** parent
+![](./assets/remove-empty-relationship-lines.png)
+
+2. Select all of the mesh children of the **Empty** parent
+![](./assets/select-all-children.png)
+
+3. Now in the **Viewport** use the shortcut **Alt + P** and select **Copy and Keep Transformation** to move the meshes from the **Empty** parent
+![](./assets/option-p-clear-parent.png)
+
+4. You can now delete the **Empty** parent
+![](./assets/delete-empty.png)
+
+5. If you want to combine all the meshes into a single mesh, use the shortcut **Ctrl + J**
+![](./assets/ctrl-j-combine.png)
