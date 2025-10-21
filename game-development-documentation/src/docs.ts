@@ -328,6 +328,10 @@ export const docs = {
             title: "Add Color to Grayscale",
             id: "procreate/add-color-to-grayscale/add-color-to-grayscale"
         },
+        {
+            title: "Texture Paint 3D Models",
+            id: "procreate/texture-paint-3d-models/texture-paint-3d-models"
+        },
     ],
     inkscape: [
         {

@@ -1,0 +1,49 @@
+# Texture Paint 3D Models
+## Unwrap Your Model in Blender
+1. First go to the **UV Editing** Workspace and select your object in **Edit Mode**
+![](./assets/select-all-faces.png)
+
+2. Press **U** to **Unwrap** your model. Select whichever option produces the cleanest unwrap
+![](./assets/u-to-unwrap.png)
+
+3. Now in the **Shading** Workspace add an **Image Texture* Node and select **New**
+![](./assets/shading-workspace.png)
+
+4. Give the texture a **Name** and for **Generated Type** select **UV Grid** then select **New Image**
+![](./assets/add-new-uv-texture.png)
+
+5. To improve your UV unwrapping experience to to **Options** and select **Live Unwrap**
+![](./assets/tips-live-unwrap.png)
+
+6. Enable sync so you can see the live unwrap. Located at the top left with two arrows
+![](./assets/enable-sync-selection.png)
+
+7. You can also change what **Ctrl + Click** does by ctrl + clicking and opening the panel on the bottom left
+![](./assets/ctrl-click-auto-tag-seam.png)
+
+8. Enable **UV Stretch** this will help identify any issues with the UV Unwrap.
+![](./assets/enable-uv-stretch.png)
+
+9. With all these tools enabled it should be easier to unwrap and view the result on the left
+![](./assets/create-seams-for-uv-easily.gif)
+
+10. To export to Procreate, **Export > Wavefront (.obj)**
+![](./assets/export-as-obj.png)
+
+## Blender to Procreate
+
+1. 
+![](./assets/export-to-procreate.png)
+![](./assets/imported-model.png)
+![](./assets/export-from-procreate.png)
+
+## Procreate Back to Blender
+
+3. Make sure that you have the **Node Wrangler Add-On** enabled Select the **Principled BSDF Node**
+![](./assets/select-bsdf-node.png)
+
+4. You should have 3 images from procreate: Color, Roughness, and Metallic. Select all three and Node Wrangler will help you connect them
+![](./assets/ctrl-shift-t-node-wrangler.png)
+
+5. This is what the final structure looks like and the texture should be correctly displayed.
+![](./assets/correctly-added-textures.png)
