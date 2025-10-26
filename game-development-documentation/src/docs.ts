@@ -61,12 +61,16 @@ export const docs = {
             id: "blender/recalculate-normals/recalculate-normals"
         },
         {
-            title: "Auto Mirror Add-on",
+            title: "Auto Mirror Addon",
             id: "blender/auto-mirror-add-on/auto-mirror-add-on"
         },
         {
-            title: "Node Wrangler Add-on",
+            title: "Node Wrangler Addon",
             id: "blender/node-wrangler/node-wrangler"
+        },
+        {
+            title: "Ucupaint Texture Paint Addon",
+            id: "blender/ucupaint-texture-painting/ucupaint-texture-painting"
         },
         {
             title: "Inserting Background Images",
